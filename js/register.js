@@ -91,6 +91,8 @@ async function registerForm(userData) {
     },
   );
   const res = await api.json();
+  loooder.classList.add("d-none"); //اخفاء looder
+
   toastr.options = {
     positionClass: "toast-right-center",
     timeOut: 5000,
@@ -98,14 +100,14 @@ async function registerForm(userData) {
     progressBar: true,
   };
   if (res.success === true) {
-    loooder.classList.remove("d-none"); //اظهار looder
+    // loooder.classList.remove("d-none"); //اظهار looder
 
     toastr.success("تم انشاء حساب بنجاح"); //alert
     location.href = "./signIn.html"; //وديني لصفحه تسجيل الدخول لو الداتا بتاعتي صح
     loooder.classList.add("d-none"); //اخفاء looder
   } else {
-    toastr.success(`${res.message}`); //alert
-    loooder.classList.add("d-none"); //اخفاء looder
+    toastr.success(res.message); //alert
+    // loooder.classList.add("d-none"); //اخفاء looder
   }
 
   // console.log(res);
