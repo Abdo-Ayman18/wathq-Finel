@@ -26,6 +26,7 @@
 
     <link rel="stylesheet" href="css/mainStyle.css" />
     <link rel="stylesheet" href="css/mmode.css" />
+    <link rel="stylesheet" href="css/condition.css" />
   </head>
   <body>
     <!-- navbar -->
@@ -39,139 +40,10 @@
           وَثِّق
         </a>
 
-        <div class="">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar"
-            aria-label="Toggle navigation"
+        <div class="btn-home px-2 py-1 rounded">
+          <a href="./index.html" class="text-white"
+            >الرجوع الي الصفحه الرئسيه</a
           >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-
-        <div
-          class="offcanvas offcanvas-start aside-color"
-          tabindex="-1"
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-        >
-          <div class="offcanvas-header text-white">
-            <button
-              type="button "
-              class="btn-close bg-white"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-            <h4 class="offcanvas-title text-white" id="offcanvasNavbarLabel">
-              <i
-                class="fa-solid fa-shield-halved border p-1 rounded bg-white"
-                style="color: #1e40af"
-              ></i>
-              وَثِّق
-            </h4>
-          </div>
-          <div class="offcanvas-body d-flex flex-column">
-            <hr />
-            <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
-              <li class="nav-item" id="homeLin">
-                <a
-                  class="nav-link active text-white"
-                  aria-current="page"
-                  href="./index.html"
-                  ><i class="fas fa-regular fa-house"></i> الصفحه الرئسيه
-                </a>
-              </li>
-              <li class="nav-item" id="notificationsLogLin">
-                <a class="nav-link text-white" href="./notifications.html"
-                  ><img
-                    src="images/logo/nav-icon-bell.png"
-                    alt="nav-icon-bell"
-                  />
-                  سجل التنبيهات
-                </a>
-              </li>
-              <li class="nav-item" id="addLin">
-                <a class="nav-link text-white" href="./add.html"
-                  ><img
-                    src="images/logo/nav-icon-docs.png"
-                    alt="nav-icon-docs"
-                  />
-                  قائمه الوثائق
-                </a>
-              </li>
-              <li class="nav-item" id="newDosLin">
-                <a class="nav-link text-white" href="./addNewDos.html"
-                  ><img src="images/logo/nav-add.png" alt="" /> إضافه وثيقه
-                </a>
-              </li>
-              <li class="nav-item" id="dashBordLin">
-                <a class="nav-link text-white" href="./dashbord.html"
-                  ><img
-                    src="images/logo/nav-icon-dash.png"
-                    alt="nav-icon-dash"
-                  />
-                  لوحه تحكم
-                </a>
-              </li>
-              <li class="nav-item" id="renewal-guide-desLin">
-                <a class="nav-link text-white" href="./renewal.html"
-                  ><i
-                    class="fa-solid fa-person-walking-arrow-loop-left"
-                    style="color: rgb(255, 255, 255)"
-                  ></i>
-                  دليل تجديد الوثائق</a
-                >
-              </li>
-              <li class="nav-item" id="contactLin">
-                <a class="nav-link text-white" href="./contactUS.html"
-                  ><i
-                    class="fa-solid fa-phone-volume"
-                    style="color: rgb(255, 255, 255)"
-                  ></i>
-                  تواصل معنا</a
-                >
-              </li>
-            </ul>
-            <hr />
-            <ul class="navbar-nav mt-auto">
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link text-white"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                >
-                  <i class="fa-solid fa-gear fa-spin" style="color: #fff"></i>
-                  إعدادات
-                </a>
-
-                <ul class="dropdown-menu text-center bg-dark-subtle">
-                  <li>
-                    <span class="dark-iecon">
-                      <i
-                        class="fa-solid fa-moon fs-4"
-                        style="color: #ffc800"
-                      ></i>
-                    </span>
-                  </li>
-
-                  <li><hr class="dropdown-divider" /></li>
-
-                  <li>
-                    <a class="nav-link text-black" href="./profiel.html">
-                      <i class="fa-regular fa-user fs-5"></i>
-                    </a>
-                  </li>
-
-                  <li><hr class="dropdown-divider" /></li>
-                  <li>تسجيل الخروج</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
     </nav>

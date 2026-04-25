@@ -1,0 +1,14 @@
+.btn-home {
+  background-color: #6788a8;
+  color: #fff;
+  border: none;
+  box-shadow: 10px 10px 10px 0 #000;
+  transition:
+    box-shadow 0.5s,
+    transform 0.5s;
+}
+.btn-home:hover {
+  box-shadow: none;
+  transform: translate(10px, 10px);
+  cursor: pointer;
+}
