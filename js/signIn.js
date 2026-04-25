@@ -62,7 +62,7 @@ function setForm() {
     email: inputs[0].value,
     password: inputs[1].value,
   };
-  console.log(user);
+  // console.log(user);
   loginForm(user);
   // user=userData
 }
