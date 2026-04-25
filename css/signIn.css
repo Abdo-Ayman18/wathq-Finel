@@ -1,0 +1,194 @@
+/* ali ead */
+#signIn {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 60px 0; 
+    margin-top: 30px; */
+}
+:root {
+  --main-color: #1e40af;
+}
+#signIn .main-card {
+  background: #fff;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+#signIn .form-section {
+  padding: 45px;
+}
+
+#signIn .form-title {
+  font-weight: 700;
+  color: #1c3faa;
+  margin-bottom: 10px;
+}
+
+#signIn .sub-text {
+  color: #777;
+  margin-bottom: 25px;
+}
+
+#signIn .tabs {
+  display: flex;
+  background: #f1f3f6;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+#signIn .tabs button {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  background: transparent;
+  font-weight: 600;
+}
+
+#signIn .tabs .active {
+  background-color: #3440ef;
+  color: #fff;
+}
+
+#signIn .input-group {
+  margin-bottom: 18px;
+  position: relative;
+}
+
+#signIn .input-group i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+#signIn .input-group input {
+  width: 100%;
+  height: 55px;
+  padding-left: 40px;
+  padding-right: 15px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid gray;
+  outline: none;
+}
+
+#signIn .input-group input:focus {
+  border-color: 2px var(--main-color);
+  box-shadow: 0 0 0 0.15rem rgba(30, 64, 175, 0.25);
+}
+#signIn .login-btn {
+  background: #2f55d4;
+  color: #fff;
+  border: none;
+  width: 100%;
+  height: 48px;
+  border-radius: 12px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+#signIn .login-btn:hover {
+  background: #2548b8;
+}
+
+#signIn .blue-section {
+  background: linear-gradient(135deg, #2f55d4, #2443b2);
+  color: #fff;
+  padding: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#signIn .logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+#signIn .blue-section h3 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+#signIn .blue-section p {
+  opacity: 0.9;
+  font-size: 14px;
+}
+
+#signIn .footer-users {
+  margin-top: 30px;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+#signIn .password-box {
+  position: relative;
+}
+
+#signIn .password-box i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #777;
+}
+
+#signIn .input-group {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+#signIn .input-group i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+#signIn .input-group input {
+  width: 100%;
+  height: 45px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding-left: 40px;
+  padding-right: 15px;
+}
+
+#signIn .register-btn {
+  background: #2f55d4;
+  color: #fff;
+  border: none;
+  width: 100%;
+  height: 48px;
+  border-radius: 12px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+#signIn .register-btn:hover {
+  background: #2548b8;
+}
+
+@media (max-width: 768px) {
+  #signIn .main-card {
+    margin: 0;
+    /* padding: 20px; */
+    border-radius: 20px;
+    width: 100%;
+  }
+}
+
+.toast-right-center {
+  top: 15% !important;
+  right: 12px !important;
+  transform: translateY(-50%) !important;
+}

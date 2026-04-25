@@ -1,0 +1,19 @@
+/* abdo */
+#errors h2 {
+  color: var(--text-color);
+}
+
+#errors .btn1 {
+  background-color: var(--buttom-color);
+  color: var(--main-color);
+  box-shadow: 10px 10px 10px 0 #000;
+  transition:
+    box-shadow 0.5s,
+    transform 0.5s;
+}
+
+#errors .btn1:hover {
+  box-shadow: none;
+  transform: translate(10px, 10px);
+  cursor: pointer;
+}

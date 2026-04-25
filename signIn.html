@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>وَثِّق / تسجيل دخول</title>
+    <link
+      rel="shortcut icon"
+      href="images/logo/main-logo.png"
+      type="image/x-icon"
+    />
+    <!-- font cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- bootstrab -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- mainStyle -->
+    <link rel="stylesheet" href="css/signIn.css" />
+
+    <link rel="stylesheet" href="css/mainStyle.css" />
+        <link rel="stylesheet" href="css/mmode.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+    />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar fixed-top border-bottom border-black shadow-lg">
+      <div class="container">
+        <a class="navbar-brand text-white fs-3 fw-bold" href="#"
+          ><i
+            class="fa-solid fa-shield-halved border p-1 rounded bg-white"
+            style="color: #1e40af"
+          ></i>
+          وَثِّق
+        </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- login & register  -->
+    <section id="signIn" class="mt-lg-5 py-lg-5">
+      <!-- login -->
+      <div id="login" class="">
+        <div class="container">
+          <div class="row main-card mx-auto">
+            <!--   LEFT BLUE -->
+
+            <div class="col-md-6 blue-section d-none d-md-flex">
+              <div class="logo">
+                <i class="fa-solid fa-shield-halved"></i> وثّق
+              </div>
+
+              <h3>شريكك الذكي لحماية وثائقك الرسمية</h3>
+
+              <p>
+                انضم لأكثر من 50,000 مصري يعتمدون على وثق لتأمين مستنداتهم
+                الرسمية وتجنب الغرامات.
+              </p>
+              <div class="doc-container">
+                <img src="images/login.png" alt="login" class="w-100" />
+              </div>
+              <div class="footer-users">موثوق من آلاف المواطنين</div>
+            </div>
+
+            <!--RIGHT FORM -->
+            <div class="col-12 col-md-6 form-section">
+              <h4 class="form-title">مرحباً بك في وثّق</h4>
+
+              <p class="sub-text">سجل دخولك لمتابعة حالة وثائقك الرسمية</p>
+
+              <div class="tabs">
+                <a
+                  href="./register.html"
+                  id="btn-register "
+                  class="d-inline-block w-50 py-2 text-center"
+                  >إنشاء حساب</a
+                >
+                <a
+                  href="./index.html"
+                  class="active d-inline-block w-50 py-2 text-center"
+                  >تسجيل الدخول</a
+                >
+              </div>
+              <form id="singIn">
+                <div class="input-group">
+                  <i class="fa fa-user"></i>
+                  <input
+                    type="text"
+                    class=""
+                    placeholder="البريد الإلكتروني "
+                  />
+                </div>
+                <!-- alert email -->
+                <ul id="alertEmail" class="alert alert-danger p-2 d-none">
+                  <li>تنسيق البريد الإلكتروني غير صالح</li>
+                </ul>
+
+                <div class="input-group password-box">
+                  <!-- <i class="fa fa-lock"></i> -->
+                  <input type="password" class="" placeholder="كلمة المرور" />
+                  <i class="fa fa-eye" id="togglePassword"></i>
+                </div>
+                <!-- alert password -->
+                <ul id="alertPassWord" class="alert alert-danger p-2 d-none">
+                  <li>
+                    ثمانية أحرف على الأقل، حرف واحد على الأقل كبتل ورقم واحد على
+                    الأقل
+                  </li>
+                </ul>
+                <button
+                  href="./index.html"
+                  class="register-btn"
+                  id="btnsingIn"
+                  type="submit"
+                >
+                  تسجيل دخول
+                </button>
+              </form>
+              <hr />
+
+              <div class="text-center">
+                ليس لديك حساب؟
+                <a href="./register.html" id="go-register"> إنشاء حساب جديد </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end footer -->
+    <div
+      class="foot py-4 border-top border-1 border-secondary-subtle text-center text-secondary bg-secondary-subtle"
+    >
+      <h5 class="">جميع الحقوق محفوظة لمنصة وثق © 2026</h5>
+      <p class="h6">
+        باستخدامك لمنصة وَثِّق، فإنك توافق على الشروط والأحكام الخاصة باستخدام
+        خدمات إدارة وتجديد الوثائق الرسمية.
+      </p>
+    </div>
+    <!-- loader -->
+    <div id="loooder" class="lood d-flex align-items-center justify-content-center  d-none">
+      <!-- From Uiverse.io by mobinkakei -->
+      <div id="wifi-loader">
+        <svg class="circle-outer" viewBox="0 0 86 86">
+          <circle class="back" cx="43" cy="43" r="40"></circle>
+          <circle class="front" cx="43" cy="43" r="40"></circle>
+          <circle class="new" cx="43" cy="43" r="40"></circle>
+        </svg>
+        <svg class="circle-middle" viewBox="0 0 60 60">
+          <circle class="back" cx="30" cy="30" r="27"></circle>
+          <circle class="front" cx="30" cy="30" r="27"></circle>
+        </svg>
+        <svg class="circle-inner" viewBox="0 0 34 34">
+          <circle class="back" cx="17" cy="17" r="14"></circle>
+          <circle class="front" cx="17" cy="17" r="14"></circle>
+        </svg>
+        <div class="text fs-4 fw-bold" data-text="...Loading"></div>
+      </div>
+    </div>
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/signIn.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <!-- mainJs -->
+        <script src="js/mmode.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <script src="./js/gardApp.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وَثِّق / اضافه وثيقه</title>
+    <link rel="shortcut icon" href="images/logo/main-logo.png" type="image/x-icon">
+    <!-- font cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <!-- bootstrab -->
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <!-- fontawesome -->
+     <link rel="stylesheet" href="css/all.min.css">
+     <!-- mainStyle -->
+     <link rel="stylesheet" href="css/addNewDos.css">
+
+
+     <link rel="stylesheet" href="css/mainStyle.css">
+         <link rel="stylesheet" href="css/mmode.css" />
+
+</head>
+<body>
+    <!-- navbar -->
+<nav class="navbar  fixed-top  border-bottom border-black shadow-lg">
+  <div class="container">
+    <a class="navbar-brand text-white fs-3 fw-bold" href="#"><i class="fa-solid fa-shield-halved border p-1 rounded bg-white" style="color: #1E40AF;"></i> وَثِّق </a>
+   
+     
+<div class="">
+   <!-- <span class="btn btn-outline-light ms-4" id="signInNav">تسجيل الدخول</span> -->
+      <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon  "></span>
+    </button>
+
+</div>
+    
+    <div class="offcanvas offcanvas-start aside-color" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header text-white">
+        <button type="button " class="btn-close bg-white "  data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <h4 class="offcanvas-title text-white " id="offcanvasNavbarLabel"><i class="fa-solid fa-shield-halved border p-1 rounded bg-white" style="color: #1E40AF;"></i> وَثِّق</h4>
+      </div>
+      <div class="offcanvas-body d-flex flex-column">
+<hr>
+  <ul class="navbar-nav justify-content-start flex-grow-1 pe-3 ">
+   <li class="nav-item">
+                <a
+                  class="nav-link active text-white"
+                  aria-current="page"
+                  href="./index.html"
+                  ><i class="fas fa-regular fa-house"></i> الصفحه الرئسيه
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./notifications.html"
+                  ><img
+                    src="images/logo/nav-icon-bell.png"
+                    alt="nav-icon-bell"
+                  />
+                  سجل التنبيهات
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./add.html"
+                  ><img
+                    src="images/logo/nav-icon-docs.png"
+                    alt="nav-icon-docs"
+                  />
+                  قائمه الوثائق
+                </a>
+              </li>
+              <li class="nav-item bg-secondary px-2 rounded">
+                <a class="nav-link text-white" href="./addNewDos.html"
+                  ><img src="images/logo/nav-add.png" alt="nav-add" /> إضافه
+                  وثيقه
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./dashbord.html"
+                  ><img src="images/logo/nav-icon-dash.png" alt="" /> لوحه تحكم
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./renewal.html"
+                  ><i
+                    class="fa-solid fa-person-walking-arrow-loop-left"
+                    style="color: rgb(255, 255, 255)"
+                  ></i>
+                  دليل تجديد الوثائق</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./contactUS.html"
+                  ><i
+                    class="fa-solid fa-phone-volume"
+                    style="color: rgb(255, 255, 255)"
+                  ></i>
+                  تواصل معنا</a
+                >
+              </li>
+  </ul>
+<hr>
+  <ul class="navbar-nav mt-auto">
+    <li class="nav-item dropdown">
+      <a class="nav-link  text-white" href="#" role="button" data-bs-toggle="dropdown">
+       <i class="fa-solid fa-gear fa-spin" style="color:#fff;"></i> إعدادات 
+      </a>
+
+      <ul class="dropdown-menu text-center  bg-dark-subtle ">
+        <li>
+          <span class="dark-iecon">
+            <i class="fa-solid fa-moon fs-4" style="color: #ffc800; "></i>
+          </span>
+        </li>
+    
+            <li><hr class="dropdown-divider"></li>
+           <li>
+                    <a class="nav-link text-black" href="./profiel.html">
+                      <i class="fa-regular fa-user fs-5"></i>
+                    </a>
+                  </li>
+
+        <li><hr class="dropdown-divider"></li>
+        <li id="logOut">تسجيل الخروج</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </div>
+</nav>
+
+<main class="mt-5 pt-4  ">
+<!-- add new dos  اضافه وثيقه جديده -->
+    <section id="addNewDos"  class="bg-secondary-subtle ">
+      <div class="container justify-content-center align-items-center py-5">
+      <div class="card document-card p-5 shadow-sm shadow-lg">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h2 class="fw-bold mb-0 fs-3">إضافة وثيقة جديدة</h2>
+        
+        </div>
+        <p class="text-muted small mb-4">
+          أدخل بيانات وثيقتك الرسمية بدقة لضمان استلام التنبيهات في موعدها.
+        </p>
+
+        <!-- <form> -->
+          <div class="row g-3">
+            <!-- name dos -->
+           <div class="col-md-5">
+               <label  for="nameDos" class="form-label text-secondary small" >اسم الوثيقة </label>
+               <input type="text" list="nameLi" id="nameDos" placeholder="(مثال: رخصة القيادة)" class=" form-control">
+               <datalist id="nameLi">
+                <option value="بطاقة هوية"></option>
+                <option value="جواز سفر"></option>
+                <option value="رخصة قيادة"></option>
+               </datalist>
+            </div>
+            <!-- location Dos -->
+            <div class="col-md-5">
+              <label for="locationDos" class="form-label text-secondary small"
+                > رقم الوثيقه + الجهه المصدره للوثيقه</label
+              >
+              <input 
+              id="locationDos"
+                type="text"
+                class="form-control"
+                placeholder="مثال: مصلحة الأحوال المدنية - 123345"
+              />
+            </div>
+            <!-- start date-->
+            <div class="col-md-5">
+              <label for="startDate" class="form-label text-secondary small"
+                >تاريخ انشاء الوثيقة</label
+              >
+              <input type="date" id="startDate" class="form-control" />
+            </div>
+            <!-- end date-->
+            <div class="col-md-5">
+              <label for="endDate" class="form-label text-secondary small"
+                >تاريخ انتهاء الوثيقة</label
+              >
+              <input id="endDate" type="date" class="form-control" />
+            </div>
+            <!-- nodfcation -->
+            <div class="col-md-5">
+              <label class="form-label text-secondary small"
+                >وسيلة التنبيه المفضلة</label
+              >
+
+              <div class="d-flex gap-3 mt-1">
+                <div
+                  class="form-check border rounded px-3 py-2 flex-grow-1 d-flex align-items-center gap-2"
+                >
+                  <input
+                    class="form-check-input m-0"
+                    type="checkbox"
+                    id="email"
+                    checked
+                  />
+                  <label
+                    class="form-check-label m-0 cursor-pointer"
+                    for="email"
+                  >
+                    بريد إلكتروني
+                  </label>
+                </div>
+
+
+              </div>
+            </div>
+            <!-- الصوره -->
+            <!-- <div class="col-12 mt-4">
+              <label class="form-label text-secondary small"
+                >صورة الوثيقة (اختياري)</label
+              >
+              
+              <div
+                class="upload-box img-folder border-dashed rounded text-center p-4"
+              >
+                <i class="fas fa-image fa-2x text-primary mb-2"></i>
+                <p class="mb-1 fw-bold">
+                  اسحب صورة الوثيقة هنا أو اضغط للاختيار
+                </p>
+                <span class="text-muted extra-small"
+                  >يدعم ملفات JPG, PNG, PDF (بحد أقصى 5 ميجا)</span
+                >
+              </div>
+            </div> -->
+
+            <div class="col-md-12 mt-3">
+              <div
+                class="alert alert-light border-4 d-flex align-items-center py-2 px-3 m-0 rounded-4"
+              >
+                <i class="fas fa-info-circle text-primary me-2"></i>
+                <small class="text-secondary"
+                  >سيتم إرسال التنبيهات قبل 30 يوماً، 15 يوماً، و 7 أيام من
+                  تاريخ الانتهاء المذكور أعلاه.</small
+                >
+              </div>
+            </div>
+
+            <div class="w-100 d-flex gap-2 mt-4">
+              <button id="submitData" type="button" class="btn btn-primary flex-grow-1 py-2">
+                حفظ الوثيقة الآن
+              </button>
+              <button id="clear" type="button" class="btn btn-outline-secondary px-4">
+                إلغاء
+              </button>
+            </div>
+          </div>
+        <!-- </form> -->
+      </div>
+    </div>
+  </section>
+
+    </main>
+
+
+
+<!-- loader -->
+    <div id="loooder" class="lood d-flex align-items-center justify-content-center   d-none">
+      <!-- From Uiverse.io by mobinkakei -->
+      <div id="wifi-loader">
+        <svg class="circle-outer" viewBox="0 0 86 86">
+          <circle class="back" cx="43" cy="43" r="40"></circle>
+          <circle class="front" cx="43" cy="43" r="40"></circle>
+          <circle class="new" cx="43" cy="43" r="40"></circle>
+        </svg>
+        <svg class="circle-middle" viewBox="0 0 60 60">
+          <circle class="back" cx="30" cy="30" r="27"></circle>
+          <circle class="front" cx="30" cy="30" r="27"></circle>
+        </svg>
+        <svg class="circle-inner" viewBox="0 0 34 34">
+          <circle class="back" cx="17" cy="17" r="14"></circle>
+          <circle class="front" cx="17" cy="17" r="14"></circle>
+        </svg>
+        <div class="text fs-4 fw-bold" data-text="...Loading"></div>
+      </div>
+    </div>
+
+
+<!-- end footer -->
+  <div class="foot py-4 border-top border-1 border-secondary-subtle  text-center text-secondary bg-secondary-subtle">
+     <h5 class="">جميع الحقوق محفوظة لمنصة وثق © 2026</h5>
+      <p class="h6">
+        باستخدامك لمنصة وَثِّق، فإنك توافق على الشروط والأحكام الخاصة باستخدام
+        خدمات إدارة وتجديد الوثائق الرسمية.
+      </p>
+  </div>
+
+</div>
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- mainJs -->
+    <script src="js/addNewDos.js"></script>
+        <script src="js/mmode.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,87 @@
+/* hasnaa */
+:root {
+  --main-color: #1e40af;
+}
+
+body {
+  /* font-family: "Nunito Sans", sans-serif; */
+  background: #f8fafc;
+}
+
+/* <=====startTitle=====> */
+#add .contentAria h2 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #1e40af !important;
+}
+
+.title p {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* <=====startContentBody=====> */
+#add .contentAria {
+  padding: 20px;
+}
+
+#add .tables {
+  padding: 35px 0;
+}
+
+#add .item button {
+  background-color: #fff !important;
+  color: #1e40af !important;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.my-tabs {
+  border: 1px solid #e5e7eb80;
+  background-color: #e5e7eb80;
+  padding: 4px 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  width: fit-content;
+}
+
+#add .my-tabs .nav-link.active {
+  background-color: #1e40af !important;
+  color: white !important;
+  box-shadow: 3px 3px 3px 3px rgba(51, 42, 228, 0.2) !important;
+}
+/* <=====endContentBody=====> */
+
+/* <=====startTableFoot=====> */
+#add tfoot td {
+  border-bottom: none !important;
+}
+
+#add .custom-pagination {
+  gap: 8px;
+}
+
+#add .custom-pagination .page-link {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 10px;
+  color: #374151;
+}
+
+/* <=====endTableFoot=====> */
+/* btn add */
+#add .btn-add {
+  background-color: #16589a;
+  color: #fff;
+  border: none;
+  box-shadow: 10px 10px 10px 0 #000;
+  transition:
+    box-shadow 0.5s,
+    transform 0.5s;
+}
+#add .btn-add:hover {
+  box-shadow: none;
+  transform: translate(10px, 10px);
+  cursor: pointer;
+}

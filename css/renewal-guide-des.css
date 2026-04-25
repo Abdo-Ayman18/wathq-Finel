@@ -1,0 +1,98 @@
+/* basmala */
+#renewal-guide-des {
+  background: #f5f7fb;
+  font-family: Tahoma;
+}
+
+#renewal-guide-des .main-title {
+  font-weight: 800;
+  color: #1e3a8a;
+}
+
+/* cards */
+#renewal-guide-des .service-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  height: 100%;
+}
+/* iecons card color */
+#renewal-guide-des .icon {
+  width: 55px;
+  height: 55px;
+  margin-left: auto;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+#renewal-guide-des .green {
+  background: #e6f8ef;
+  color: #2bb673;
+}
+
+#renewal-guide-des .yellow {
+  background: #fff5da;
+  color: #d6a200;
+}
+
+#renewal-guide-des .blue {
+  background: #eaf1ff;
+  color: #2f6bff;
+}
+
+#renewal-guide-des .dept {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+#renewal-guide-des .req-title {
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+#renewal-guide-des .service-card ul {
+  list-style: none;
+  padding: 0;
+  color: #555;
+  font-size: 14px;
+}
+
+#renewal-guide-des .price {
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+#renewal-guide-des .green-bg {
+  background: #e6f8ef;
+  color: #2bb673;
+}
+/* hover btn عرض كافه المواقع */
+#renewal-guide-des .btn1 {
+  background-color: #16589a;
+  color: #fff;
+  border: none;
+  box-shadow: 10px 10px 10px 0 #000;
+  transition:
+    box-shadow 0.5s,
+    transform 0.5s;
+}
+#renewal-guide-des .btn1:hover {
+  box-shadow: none;
+  transform: translate(10px, 10px);
+  cursor: pointer;
+}
+/* hover cards */
+#renewal-guide-des .contact-caption {
+  transition: all 0.5s;
+}
+#renewal-guide-des .contact-caption:hover {
+  box-shadow: 3px 4px 7px 0 #1c446b;
+  transform: translateY(10px);
+}

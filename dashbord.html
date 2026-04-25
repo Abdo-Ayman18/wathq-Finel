@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <script src="./js/gardApp.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وَثِّق / لوحه التحكم</title>
+    <link rel="shortcut icon" href="images/logo/main-logo.png" type="image/x-icon">
+    <!-- font cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <!-- bootstrab -->
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <!-- fontawesome -->
+     <link rel="stylesheet" href="css/all.min.css">
+     <!-- mainStyle -->
+     <link rel="stylesheet" href="css/dashboard.css">
+    
+
+     <link rel="stylesheet" href="css/mainStyle.css">
+         <link rel="stylesheet" href="css/mmode.css" />
+s
+</head>
+<body>
+    <!-- navbar -->
+<nav class="navbar  fixed-top  border-bottom border-black shadow-lg">
+  <div class="container">
+    <a class="navbar-brand text-white fs-3 fw-bold" href="#"><i class="fa-solid fa-shield-halved border p-1 rounded bg-white" style="color: #1E40AF;"></i> وَثِّق </a>
+   
+           <div class="search d-flex align-items-center justify-content-center">
+          <!-- ====== زرار الجرس ====== -->
+          <div class="dropdown">
+            <!-- زرار فتح الإشعارات -->
+            <button
+              class="btn position-relative"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <!-- أيقونة الجرس -->
+              <i class="fa-solid fa-bell fs-5"></i>
+
+              <!-- عدد الإشعارات (Badge فوق الجرس) -->
+              <span
+                id="notiCount"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              >
+                0
+              </span>
+            </button>
+
+            <!-- قائمة الإشعارات اللي هتظهر -->
+            <ul
+              id="notiList"
+              class="dropdown-menu dropdown-menu-end shadow"
+              style="width: 500px; min-height: 100%; overflow-y: auto"
+            ></ul>
+          </div>
+
+          <input
+          id="searchInput"
+          oninput="searcData()"
+            type="search"
+            placeholder=" بحث عن وثيقه "
+            class="navSearch px-lg-1 py-lg-2 mx-lg-5 w-100 rounded-3"
+          />
+        </div>
+<div class="">
+  <!-- <span class="btn btn-outline-light ms-4" id="signInNav">تسجيل الدخول</span> -->
+      <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon  "></span>
+    </button>
+
+</div>
+    
+    <div class="offcanvas offcanvas-start aside-color" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header text-white">
+        <button type="button " class="btn-close bg-white "  data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <h4 class="offcanvas-title text-white " id="offcanvasNavbarLabel"><i class="fa-solid fa-shield-halved border p-1 rounded bg-white" style="color: #1E40AF;"></i> وَثِّق</h4>
+      </div>
+      <div class="offcanvas-body d-flex flex-column">
+<hr>
+  <ul class="navbar-nav justify-content-start flex-grow-1 pe-3 ">
+    <li class="nav-item">
+                <a
+                  class="nav-link active text-white"
+                  aria-current="page"
+                  href="./index.html"
+                  ><i class="fas fa-regular fa-house"></i> الصفحه الرئسيه
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./notifications.html"
+                  ><img
+                    src="images/logo/nav-icon-bell.png"
+                    alt="nav-icon-bell"
+                  />
+                  سجل التنبيهات
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./add.html"
+                  ><img
+                    src="images/logo/nav-icon-docs.png"
+                    alt="nav-icon-docs"
+                  />
+                  قائمه الوثائق
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./addNewDos.html"
+                  ><img src="images/logo/nav-add.png" alt="nav-add" /> إضافه
+                  وثيقه
+                </a>
+              </li>
+              <li class="nav-item bg-secondary px-2 rounded">
+                <a class="nav-link text-white" href="./dashbord.html"
+                  ><img src="images/logo/nav-icon-dash.png" alt="" /> لوحه تحكم
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./renewal.html"
+                  ><i
+                    class="fa-solid fa-person-walking-arrow-loop-left"
+                    style="color: rgb(255, 255, 255)"
+                  ></i>
+                  دليل تجديد الوثائق</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./contactUS.html"
+                  ><i
+                    class="fa-solid fa-phone-volume"
+                    style="color: rgb(255, 255, 255)"
+                  ></i>
+                  تواصل معنا</a
+                >
+              </li>
+  </ul>
+<hr>
+  <ul class="navbar-nav mt-auto">
+    <li class="nav-item dropdown">
+      <a class="nav-link  text-white" href="#" role="button" data-bs-toggle="dropdown">
+       <i class="fa-solid fa-gear fa-spin" style="color:#fff;"></i> إعدادات 
+      </a>
+
+      <ul class="dropdown-menu text-center  bg-dark-subtle ">
+        <li>
+          <span class="dark-iecon">
+            <i class="fa-solid fa-moon fs-4" style="color: #ffc800; "></i>
+          </span>
+        </li>
+    
+            <li><hr class="dropdown-divider"></li>
+
+            <li>
+                    <a class="nav-link text-black" href="./profiel.html">
+                      <i class="fa-regular fa-user fs-5"></i>
+                    </a>
+                  </li>
+
+        <li><hr class="dropdown-divider"></li>
+        <li id="logOut">تسجيل الخروج</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </div>
+</nav>
+
+<main class="mt-5 pt-4  ">
+
+
+
+
+      <!-- dashboard لوحه التحكم -->
+      <section id="dashboard" class="py-4 ">
+        <div class="container mt-4">
+          <!-- welcome -->
+  
+          <div class="d-flex justify-content-between">
+            <div class="mb-3">
+              <h2 class="fw-bold h3" id="name">👋 مرحباً أحمد محمد</h5>
+              <span class="small">تابع وثائقك وجدد الخدمات</span>
+            </div>
+  
+            <!-- <div>
+              <i class="fa-regular fa-bell"></i>
+              أحمد محمد
+            </div> -->
+          </div>
+  
+          <div class="row g-3 align-items-center">
+            <!-- alert -->
+  
+            <div class="col-md-8">
+              <div class="card alert-card">
+                <div class="row align-items-center justify-content-between">
+                  <div class="col-md-7">
+                    <span class="badge-yellow">تنبيه هام</span>
+  
+                    <h6 class="mt-2">أقرب وثيقة ستنتهي خلال 8 أيام</h6>
+  
+                    <div class="small">
+                      رخصة قيادة السيارة - وحدة مرور المعادي
+                    </div>
+  
+                    <a
+                      href="https://www.elbalad.news/6048666"
+                      target="_blank"
+                      class="btn btn-primary  my-3 px-3 py-2  btn1"
+                    >
+                      ابدأ إجراءات التجديد
+                    </a>
+                  </div>
+  
+                  <div class="col col-md-3 text-end">
+                    <div class="img w-75 mx-auto mx-lg-0">
+                      <img
+                        src="images/dashboard.jpeg"
+                        class="w-100 rounded-4 shadow"
+                        alt="dashboard"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <!-- add doc -->
+  
+            <div class="col-md-4">
+              <div class="card add-doc">
+                <div class="add-icon">
+                  <i class="fa-solid fa-plus"></i>
+                </div>
+  
+                <h6 class="mt-3">أضف وثيقة جديدة</h6>
+  
+                <p class="small">قم بإضافة وثيقة أخرى واحصل على تنبيه</p>
+  
+                <a href="./addNewDos.html" class="btn btn-light border w-75 mx-auto btn1  border-0 py-2" id="dashboardAddDoc">إضافة الآن</a>
+              </div>
+            </div>
+  
+            <!-- filters -->
+             <h3 class="pt-3 fw-semibold" >وثائقي المحفوظه :</h3>
+  
+            <div class="container py-4">
+    <!-- Tabs -->
+    <ul class="nav nav-pills mb-3" id="doc-pills-tab" role="tablist">
+      
+      <li class="nav-item">
+        <button
+          class="nav-link active"
+          id="doc-pills-all-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#doc-pills-all"
+          type="button"
+          role="tab"
+          aria-controls="doc-pills-all"
+          aria-selected="true"
+        >
+          الكل
+        </button>
+      </li>
+  
+      <li class="nav-item">
+        <button
+          class="nav-link"
+          id="doc-pills-sary-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#doc-pills-sary"
+          type="button"
+          role="tab"
+          aria-controls="doc-pills-sary"
+          aria-selected="false"
+        >
+          سارية
+        </button>
+      </li>
+  
+      <li class="nav-item">
+        <button
+          class="nav-link"
+          id="doc-pills-nosary-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#doc-pills-nosary"
+          type="button"
+          role="tab"
+          aria-controls="doc-pills-nosary"
+          aria-selected="false"
+        >
+          قاربت على الانتهاء
+        </button>
+      </li>
+      <li class="nav-item">
+        <button
+          class="nav-link"
+          id="doc-pills-envalid-tab"
+          data-bs-toggle="pill"
+          data-bs-target="#doc-pills-envalid"
+          type="button"
+          role="tab"
+          aria-controls="doc-pills-envalid"
+          aria-selected="false"
+        >
+         أنتهت
+        </button>
+      </li>
+  
+    </ul>
+  
+    <!-- Content -->
+    <div class="tab-content">
+  
+      <!-- ALL -->
+      <div class="tab-pane fade show active" id="doc-pills-all">
+        <div class="row g-3" id="allData">
+                  
+                  </div>
+      </div>
+  
+      <!-- سارية -->
+      <div class="tab-pane fade" id="doc-pills-sary">
+        <div class="row g-3" id="validData" >
+  
+                     
+  
+        </div>
+      </div>
+  
+      <!-- قريب الانتهاء -->
+      <div class="tab-pane fade" id="doc-pills-nosary">
+        <div class="row g-3" id="about_to_expireData" >
+  
+                  
+  
+        </div>
+      </div>
+  
+      <!--  الانتهاء -->
+      <div class="tab-pane fade" id="doc-pills-envalid">
+        <div class="row g-3" id="expireData" >
+  
+
+  
+        </div>
+      </div>
+  
+    </div>
+  </div>
+  
+            <!-- map -->
+  
+            <div class="col-lg-6">
+              <div class="card p-4">
+                <h6>أقرب مراكز التجديد بلمنصوره</h6>
+  
+                <div class="map mt-3">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d49492.220935195415!2d31.34183855807173!3d31.049428547278076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z2LPYrNmEINmF2K_ZhtmKINin2YTZhdmG2LXZiNix2YfigK3igK0!5e1!3m2!1sen!2seg!4v1773866438184!5m2!1sen!2seg"
+                    width="100%"
+                    height="250"
+                    style="border: 0 ;border-radius: 10px;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+  
+            <!-- stats -->
+  
+            <div class="stats-card">
+              <h5 class="stats-title">إحصائيات وثائقي</h5>
+  
+              <!-- valid documents -->
+  
+              <div class="stat">
+                <div class="stat-header">
+                  <span class="percent-green fw-bold fs-5 text-black"></span>
+  
+                  <span>وثائق سارية </span>
+                </div>
+  
+                <div class="progress">
+                  <div class="progress-fill gree" id="valid" ></div>
+                </div>
+              </div>
+  
+              <!-- about-expired -->
+  
+              <div class="stat">
+                <div class="stat-header">
+                  <span class="percent-ye fw-bold fs-5 text-black"></span>
+  
+                  <span>وثائق قاربت علي الانتهاء </span>
+                </div>
+  
+                <div class="progress">
+                  <div class="progress-fill ye"></div>
+                </div>
+              </div>
+              <!-- expired -->
+  
+              <div class="stat">
+                <div class="stat-header">
+                  <span class="percent-red fw-bold fs-5 text-black"></span>
+  
+                  <span>وثائق منتهية </span>
+                </div>
+  
+                <div class="progress">
+                  <div class="progress-fill re"></div>
+                </div>
+              </div>
+  
+              <div class="note">
+                تأكد دائماً من تحديث بياناتك في مواعيدها كي تستمر الاستفادة من دعم
+                الخدمات.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+    </main>
+
+
+
+<!-- loader -->
+    <div id="loooder" class="lood d-flex align-items-center justify-content-center  d-none">
+      <!-- From Uiverse.io by mobinkakei -->
+      <div id="wifi-loader">
+        <svg class="circle-outer" viewBox="0 0 86 86">
+          <circle class="back" cx="43" cy="43" r="40"></circle>
+          <circle class="front" cx="43" cy="43" r="40"></circle>
+          <circle class="new" cx="43" cy="43" r="40"></circle>
+        </svg>
+        <svg class="circle-middle" viewBox="0 0 60 60">
+          <circle class="back" cx="30" cy="30" r="27"></circle>
+          <circle class="front" cx="30" cy="30" r="27"></circle>
+        </svg>
+        <svg class="circle-inner" viewBox="0 0 34 34">
+          <circle class="back" cx="17" cy="17" r="14"></circle>
+          <circle class="front" cx="17" cy="17" r="14"></circle>
+        </svg>
+        <div class="text fs-4 fw-bold" data-text="...Loading"></div>
+      </div>
+    </div>
+
+
+
+<!-- end footer -->
+  <div class="foot py-4 border-top border-1 border-secondary-subtle  text-center text-secondary bg-secondary-subtle">
+    <h5 class="">جميع الحقوق محفوظة لمنصة وثق © 2026</h5>
+      <p class="h6">
+        باستخدامك لمنصة وَثِّق، فإنك توافق على الشروط والأحكام الخاصة باستخدام
+        خدمات إدارة وتجديد الوثائق الرسمية.
+      </p>
+  </div>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- mainJs -->
+    <script src="js/dashbord.js"></script>
+        <script src="js/mmode.js"></script>
+
+    
+</body>
+</html>
+
+

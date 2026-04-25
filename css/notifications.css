@@ -1,0 +1,299 @@
+/* shahd */
+/* =========================================
+   1. General Settings and Fonts / الإعدادات العامة والخطوط
+   ========================================= */
+body {
+  background-color: #f6f8fc !important;
+}
+
+.main-heading {
+  color: #1a3a83;
+  font-size: 2rem;
+}
+
+/* =========================================
+   2. Alerts Section and Top Buttons / قسم التنبيهات والأزرار العلوية
+   ========================================= */
+#notifications-log .alert-box-custom {
+  background: #ffffff;
+  border: 1px solid #eef0f5;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#notifications-log .alert-box-custom:hover {
+  border-color: #1a3a83;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#notifications-log .icon-square {
+  background-color: #f0f5ff;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  color: #1a3a83;
+}
+
+#notifications-log .btn-search-style {
+  background-color: #2b418e !important;
+  color: white !important;
+  transition: 0.3s;
+}
+
+#notifications-log .btn-search-style:hover {
+  background-color: #1a2a5a !important;
+  transform: scale(1.05);
+}
+
+#notifications-log .link-item {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#notifications-log .link-item:hover {
+  color: #2b418e;
+}
+
+/* =========================================
+   3. Card Styling / تنسيق البطاقات
+   ========================================= */
+#notifications-log .custom-card-id {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #f2f2f2;
+  padding: 24px;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#notifications-log .custom-card-id:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+  border-color: #dee2e6;
+}
+
+#notifications-log .icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+/* Soft background colors for icons / ألوان الأيقونات والخلفيات الناعمة */
+
+#notifications-log .bg-orange-soft {
+  background: #fff8e1;
+  color: #ffa000;
+}
+#notifications-log .bg-blue-soft {
+  background: #eef4ff;
+  color: #3f7afc;
+}
+
+#notifications-log .label-badge {
+  background: #f8f9fa;
+  color: #adb5bd;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+#notifications-log .requirements-box {
+  background: #fafafa;
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 15px;
+  flex-grow: 1;
+}
+
+#notifications-log .requirements-box .pepar-text-orange {
+  color: #ffa000;
+}
+
+#notifications-log .footer-action {
+  text-decoration: none !important;
+  padding-top: 15px;
+  margin-top: auto;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+#notifications-log .orange-link {
+  color: #ffa000 !important;
+}
+#notifications-log .blue-link {
+  color: #3f7afc !important;
+}
+
+/* =========================================
+   4. Timeline / التايم لاين
+   ========================================= */
+#notifications-log .timeline-container {
+  position: relative;
+  padding: 20px;
+}
+
+#notifications-log .timeline-line-right {
+  position: absolute;
+  right: 35px;
+  top: 30px;
+  bottom: 30px;
+  width: 2px;
+  background: #f0f0f0;
+  z-index: 1;
+}
+
+#notifications-log .timeline-item {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 30px;
+}
+
+#notifications-log .status-dot-right {
+  width: 32px;
+  height: 32px;
+
+  border: 2px solid;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+#notifications-log .btn-note {
+  background-color: #eceff5f1;
+  border: none;
+  border-top: 2px solid rgb(210, 207, 207);
+}
+
+/* =========================================
+   5. Map and Promo Banner / قسم الخريطة والبانر الدعائي
+   ========================================= */
+#notifications-log .custom-location-component {
+  direction: rtl;
+}
+
+#notifications-log .promo-banner-card {
+  background-color: #1a3a8f;
+  border-radius: 20px;
+  color: #ffffff;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+#notifications-log .banner-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+#notifications-log .banner-desc {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  max-width: 550px;
+  opacity: 0.9;
+  margin-bottom: 25px;
+}
+
+#notifications-log .btn-interactive-map {
+  background-color: #ffffff;
+  color: #1a3a8f;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+
+  border: none;
+  box-shadow: 10px 10px 10px 0 #000;
+  transition:
+    box-shadow 0.5s,
+    transform 0.5s;
+}
+
+#notifications-log .btn-interactive-map:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+
+  box-shadow: none;
+  transform: translate(10px, 10px);
+  cursor: pointer;
+}
+
+#notifications-log .map-details-container {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 25px;
+  border: 1px solid #ececec;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+}
+
+#notifications-log .section-header {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#notifications-log .map-visual-area {
+  width: 100%;
+  height: 320px;
+  border-radius: 15px;
+  border: 1px solid #f0f0f0;
+  overflow: hidden;
+}
+
+#notifications-log .branch-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 10px;
+}
+#notifications-log .icon-send {
+  color: #3b71ca;
+  font-size: 1.4rem;
+  transform: rotate(-45deg);
+  margin-top: 5px;
+}
+#notifications-log .branch-name {
+  margin-bottom: 4px;
+  font-weight: 700;
+  color: #333;
+}
+#notifications-log .branch-location {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin: 0;
+}
+
+/* =========================================
+   6. Responsive / التجاوب مع الشاشات
+   ========================================= */
+@media (max-width: 768px) {
+  #notifications-log .promo-banner-card {
+    padding: 30px 20px;
+  }
+  #notifications-log .banner-desc {
+    margin: 0 auto 25px;
+  }
+  #notifications-log .branch-item {
+    justify-content: flex-start;
+  }
+}

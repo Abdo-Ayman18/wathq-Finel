@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="dark">
+  <head>
+    <!-- <script src="./js/gardApp.js"></script> -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="موقع وثّق يوفر خدمة تجديد الوثائق الرسمية وتراخيص العمل بسهولة وأمان أونلاين داخل مصر بدون مجهود أو طوابير. قدّم طلبك الآن في دقائق."
+    />
+
+    <meta
+      name="keywords"
+      content="تجديد الوثائق, تجديد بطاقة الرقم القومي, تجديد جواز السفر, تجديد رخصة, تراخيص العمل, خدمات حكومية اونلاين, مصر, وثق"
+    />
+
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="وثّق" />
+
+    <!-- Open Graph للسوشيال -->
+    <meta
+      property="og:title"
+      content="وثّق | تجديد الوثائق الرسمية وتراخيص العمل في مصر"
+    />
+    <meta
+      property="og:description"
+      content="جدّد وثائقك الرسمية وتراخيص العمل بسهولة وأمان أونلاين بدون طوابير."
+    />
+    <meta property="og:type" content="website" />
+    <!-- <meta property="og:url" content="https://wathq-eg.com" /> -->
+    <meta property="og:image" content="images/logo/main-Logo-Live.png" />
+    <title>وَثِّق / الصفحه الرئيسيه</title>
+    <link
+      rel="shortcut icon"
+      href="images/logo/main-logo.png"
+      type="image/x-icon"
+    />
+    <!-- font cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- bootstrab -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- mainStyle -->
+    <link rel="stylesheet" href="css/mainStyle.css" />
+    <link rel="stylesheet" href="css/mmode.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar fixed-top border-bottom border-black shadow-lg">
+      <div class="container">
+        <a class="navbar-brand text-white fs-3 fw-bold" href="#"
+          ><i
+            class="fa-solid fa-shield-halved border p-1 rounded bg-white"
+            style="color: #1e40af"
+          ></i>
+          وَثِّق
+        </a>
+
+        <div class="">
+          <a
+            href="./register.html"
+            id="loginNave"
+            class="btn btn-outline-light ms-4"
+            >تسجيل الدخول</a
+          >
+          <button
+            id="sideNave"
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div
+          class="offcanvas offcanvas-start aside-color"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header text-white">
+            <button
+              type="button "
+              class="btn-close bg-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+            <h4 class="offcanvas-title text-white" id="offcanvasNavbarLabel">
+              <i
+                class="fa-solid fa-shield-halved border p-1 rounded bg-white"
+                style="color: #1e40af"
+              ></i>
+              وَثِّق
+            </h4>
+          </div>
+          <!-- links NaveBar -->
+          <div class="offcanvas-body d-flex flex-column">
+            <hr />
+            <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+              <li class="nav-item bg-secondary px-2 rounded">
+                <a
+                  class="nav-link active text-white"
+                  aria-current="page"
+                  href="./index.html"
+                  ><i class="fas fa-regular fa-house"></i> الصفحه الرئسيه
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./notifications.html"
+                  ><img
+                    src="images/logo/nav-icon-bell.png"
+                    alt="nav-icon-bell"
+                  />
+                  سجل التنبيهات
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./add.html"
+                  ><img
+                    src="images/logo/nav-icon-docs.png"
+                    alt="nav-icon-docs"
+                  />
+                  قائمه الوثائق
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./addNewDos.html"
+                  ><img src="images/logo/nav-add.png" alt="nav-add" /> إضافه
+                  وثيقه
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./dashbord.html"
+                  ><img src="images/logo/nav-icon-dash.png" alt="" /> لوحه تحكم
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./renewal.html"
+                  ><i
+                    class="fa-solid fa-person-walking-arrow-loop-left"
+                    style="color: rgb(255, 255, 255)"
+                  ></i>
+                  دليل تجديد الوثائق</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./contactUS.html"
+                  ><i
+                    class="fa-solid fa-phone-volume"
+                    style="color: rgb(255, 255, 255)"
+                  ></i>
+                  تواصل معنا</a
+                >
+              </li>
+            </ul>
+            <hr />
+            <ul class="navbar-nav mt-auto">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link text-white"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  <i class="fa-solid fa-gear fa-spin" style="color: #fff"></i>
+                  إعدادات
+                </a>
+
+                <ul class="dropdown-menu text-center bg-dark-subtle">
+                  <li>
+                    <span class="dark-iecon">
+                      <i
+                        class="fa-solid fa-moon fs-4"
+                        style="color: #ffc800"
+                      ></i>
+                    </span>
+                  </li>
+
+                  <li><hr class="dropdown-divider" /></li>
+
+                  <li>
+                    <a class="nav-link text-black" href="./profiel.html">
+                      <i class="fa-regular fa-user fs-5"></i>
+                    </a>
+                  </li>
+
+                  <li><hr class="dropdown-divider" /></li>
+                  <li id="logOut">تسجيل الخروج</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="mt-5 pt-4">
+      <!-- home -->
+      <section id="home" class="">
+        <div class="container">
+          <!-- header -->
+          <div class="row my-5">
+            <div class="col col-12 col-md-8">
+              <div class="home-header">
+                <!-- home-alert -->
+                <span
+                  class="home-alert rounded-2 bg-secondary-subtle p-2 mt-3 d-inline-block"
+                  ><span
+                    class="bg-dark d-inline-block rounded-circle"
+                    style="width: 10px; height: 10px"
+                  ></span>
+                  الحل الذكي لتجديد الوثائق في مصر
+                </span>
+                <!-- home-titel -->
+                <h1 class="mt-5">
+                  لا تفوّت موعد <br />
+                  تجديد أي <span>وثيقه</span> <br />
+                  مره اخري
+                </h1>
+                <!-- home-contant -->
+                <p class="w-75 mt-4">
+                  منصة وثق تمكّنك من متابعة تواريخ انتهاء وثائقك الرسمية بسهولة
+                  وأمان، مع تنبيهات مسبقة عبر البريد الإلكتروني أو الرسائل
+                  النصية قبل موعد الانتهاء بوقت كافٍ.
+                </p>
+                <!-- home-button -->
+                <div class="text-center text-md-end">
+                  <a
+                    href="./register.html"
+                    class="btn-start py-3 px-4 rounded-4 mx-lg-0 mx-4 d-inline-block startNowHome"
+                  >
+                    ابدأ الآن <i class="fa-solid fa-arrow-left fa-fade"></i>
+                  </a>
+                  <a
+                    href="#workHome"
+                    class="btn-watch py-3 px-4 rounded-4 mx-4 mt-4 mt-lg-0 d-inline-block"
+                  >
+                    شاهد كيف يعمل
+                  </a>
+                </div>
+                <div class="my-5 d-flex">
+                  <!-- <span class="d-flex justify-content-center  "> <i class="fa-regular fa-circle-check fa-shake fs-3 px-2" style="color: rgb(47, 169, 94);"></i>  بدون بطاقة ائتمان  </span> -->
+                  <!-- mx-lg-5 mx-2 -->
+                  <span class="d-flex justify-content-center mx-auto mx-lg-0"
+                    ><i
+                      class="fa-regular fa-circle-check fa-shake fs-3 px-2"
+                      style="color: rgb(47, 169, 94)"
+                    ></i>
+                    أمان كامل للبيانات</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col col-12 col-md-4">
+              <div class="">
+                <img
+                  src="images/man-home.png"
+                  class="w-100 d-inline-block"
+                  alt="man-home"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- counter -->
+          <div class="row my-2">
+            <div class="col col-12 col-md-6 col-lg-3 text-center my-3">
+              <h4 class="fw-bold fs-3">50K</h4>
+              <p>مستخدم نشط</p>
+            </div>
+            <div class="col col-12 col-md-6 col-lg-3 text-center my-3">
+              <h4 class="fw-bold fs-3">120K+</h4>
+              <p>وثيقه محميه</p>
+            </div>
+            <div class="col col-12 col-md-6 col-lg-3 text-center my-3">
+              <h4 class="fw-bold fs-3">99.9%</h4>
+              <p>دقة التنبيهات</p>
+            </div>
+            <div class="col col-12 col-md-6 col-lg-3 text-center my-3">
+              <h4 class="fw-bold fs-3">24/7</h4>
+              <p>دعم فني</p>
+            </div>
+          </div>
+          <!-- كيف تعمل المنصه  work home-->
+          <div id="workHome" class="mt-2 pt-5">
+            <div class="titel-workHome text-center mt-5 pt-5">
+              <h2 class="fw-bold">كيف تعمل المنصة؟</h2>
+              <p class="w-75 mx-auto mt-3">
+                ثلاث خطوات بسيطة تضمن لك عدم نسيان تجديد وثائقك الرسمية للأبد.
+              </p>
+            </div>
+            <div class="card-workHome my-5">
+              <div class="row">
+                <!-- card1 -->
+                <div class="col col-12 col-lg-4">
+                  <div class="card1 text-center h-100 rounded-5 p-4 shadow">
+                    <div class="m-4">
+                      <span
+                        ><i
+                          class="fa-solid fa-file-circle-plus fa-beat fs-3"
+                        ></i
+                      ></span>
+                      <h3 class="fw-semibold py-3">1. أضف وثيقتك</h3>
+                      <p class="w-75 mx-auto">
+                        أدخل بيانات الوثيقة (رخصة، جواز سفر، بطاقة) وتاريخ
+                        انتهائها خلال أقل من دقيقة.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- card2 -->
+                <div class="col col-12 col-lg-4 my-4 my-lg-0">
+                  <div class="card2 text-center h-100 rounded-5 p-4 shadow">
+                    <div class="m-4">
+                      <span
+                        ><i class="fa-regular fa-bell fa-beat fs-3"></i
+                      ></span>
+                      <h3 class="fw-semibold py-3">2. اختر وسيلة التنبيه</h3>
+                      <p class="w-75 mx-auto">
+                        حدد وسيلة الإشعار المناسبة لك، سواء عبر البريد
+                        الإلكتروني أو الرسائل النصية القصيرة SMS.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- card3 -->
+                <div class="col col-12 col-lg-4">
+                  <div class="card3 text-center h-100 rounded-5 p-4 shadow">
+                    <div class="m-4">
+                      <span
+                        ><i class="fa-solid fa-check-to-slot fa-beat fs-3"></i
+                      ></span>
+                      <h3 class="fw-semibold py-3">3. استلم التنبيه</h3>
+                      <p class="w-75 mx-auto">
+                        سيصلك إشعار قبل موعد الانتهاء بوقت كافٍ لتتمكن من
+                        التجديد بكل هدوء وبدون غرامات.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- لماذا يعتمد الاف ع وثق  depends-->
+          <div id="depends" class="depends py-5">
+            <div class="row">
+              <div class="col col-12 col-lg-6">
+                <div class="">
+                  <img
+                    src="images/laptop-home.png"
+                    class="w-100"
+                    alt="laptop-home"
+                  />
+                </div>
+              </div>
+              <div class="col col-12 col-lg-6">
+                <h3 class="fs-1 fw-bold w-">
+                  لماذا يعتمد آلاف المصريين على منصة وثق؟
+                </h3>
+                <div class="d-flex align-items-center">
+                  <i class="fa-solid fa-shield-halved ms-4 fs-4"></i>
+                  <div class="w-75">
+                    <h4 class="my-3">حماية كاملة لبياناتك</h4>
+                    <p>
+                      نستخدم تشفير 256-بت لضمان خصوصية بياناتك وصور وثائقك
+                      المرفوعة بأعلى معايير الأمان.
+                    </p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <i class="fa-solid fa-bolt ms-4 fs-4"></i>
+                  <div class="w-75">
+                    <h4 class="my-3">واجهة سهلة وسريعة</h4>
+                    <p>
+                      تصميم بسيط يركز على إنجاز المهمة في ثوانٍ، متوافق بالكامل
+                      مع الهواتف الذكية وأجهزة الكمبيوتر.
+                    </p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center">
+                  <i class="fa-solid fa-chart-bar ms-4 fs-4"></i>
+                  <div class="w-75">
+                    <h4 class="my-3">دقة وموثوقية عالية</h4>
+                    <p>
+                      نظام تنبيهات ذكي يعمل على مدار الساعة لضمان وصول الإشعار
+                      إليك في الموعد المحدد دون تأخير.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- الأسئلة الشائعة Questions-->
+          <div class="questions pb-5">
+            <h2 class="text-center title my-4">الأسئلة الشائعة</h2>
+
+            <div class="row g-4">
+              <div class="col col-12 col-md-6 border-end border-4 rounded-end">
+                <div class="accordion accordion-flush" id="1">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#11"
+                        aria-expanded="false"
+                        aria-controls="flush-collapseOne"
+                      >
+                        هل الخدمة مجانية؟
+                      </button>
+                    </h2>
+                    <div
+                      id="11"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#1"
+                    >
+                      <div class="accordion-body">
+                        نعم، يمكنك استخدام المنصة مجاناً لمتابعة وثائقك
+                        الأساسية، مع وجود خطط مستقبلية لتوفير خدمات إضافية
+                        وميزات متقدمة.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-12 col-md-6 border-end border-4 rounded-end">
+                <div class="accordion accordion-flush" id="2">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#22"
+                        aria-expanded="false"
+                        aria-controls="11"
+                      >
+                        هل يمكنني تعديل بيانات الوثيقة بعد إضافتها؟
+                      </button>
+                    </h2>
+                    <div
+                      id="22"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#2"
+                    >
+                      <div class="accordion-body">
+                        في حال الحاجة إلى تحديث بيانات أي وثيقة، يمكنك تعديل
+                        المعلومات بسهولة من خلال حسابك الشخصي
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-12 col-md-6 border-end border-4 rounded-end">
+                <div class="accordion accordion-flush" id="3">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#33"
+                        aria-expanded="false"
+                        aria-controls="11"
+                      >
+                        هل بياناتي وصور وثائقي آمنة؟
+                      </button>
+                    </h2>
+                    <div
+                      id="33"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#3"
+                    >
+                      <div class="accordion-body">
+                        نعم تماماً، نلتزم بأعلى معايير الأمان العالمية. يتم
+                        تشفير كافة البيانات المرفوعة ولا يتم مشاركتها مع أي جهة
+                        خارجية تحت أي ظرف.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-12 col-md-6 border-end border-4 rounded-end">
+                <div class="accordion accordion-flush" id="4">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#44"
+                        aria-expanded="false"
+                        aria-controls="11"
+                      >
+                        هل منصة وثق جهة حكومية؟
+                      </button>
+                    </h2>
+                    <div
+                      id="44"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#4"
+                    >
+                      <div class="accordion-body">
+                        منصة وثق ليست جهة حكومية، بل منصة رقمية مستقلة تساعدك
+                        على متابعة مواعيد تجديد وثائقك الرسمية وتنظيمها
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-12 col-md-6 border-end border-4 rounded-end">
+                <div class="accordion accordion-flush" id="5">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#55"
+                        aria-expanded="false"
+                        aria-controls="11"
+                      >
+                        متى يتم إرسال التنبيه؟
+                      </button>
+                    </h2>
+                    <div
+                      id="55"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#5"
+                    >
+                      <div class="accordion-body">
+                        يتم إرسال التنبيهات قبل موعد الانتهاء بفترات كافية
+                        (مثلاً قبل شهر، ثم أسبوعين، ثم أسبوع)
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-12 col-md-6 border-end border-4 rounded-end">
+                <div class="accordion accordion-flush" id="6">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#66"
+                        aria-expanded="false"
+                        aria-controls="11"
+                      >
+                        هل يمكن استخدام المنصة من الهاتف المحمول؟
+                      </button>
+                    </h2>
+                    <div
+                      id="66"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#6"
+                    >
+                      <div class="accordion-body">
+                        بالتأكيد، تم تصميم منصة وثق بنظام متوافق بالكامل مع
+                        الهواتف الذكية، لتتمكن من إدارة وثائقك واستلام التنبيهات
+                        بسهولة
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- تجنب الغرامات والتعطيل من اليوم  box -->
+          <div class="my-5 py-5 rounded-5 text-center box startNowHomeBox">
+            <h2 class="h1">تجنب الغرامات والتعطيل من اليوم</h2>
+            <p class="py-4">
+              انضم إلى أكثر من 50 ألف مصري يؤمنون وثائقهم الرسمية عبر منصة وثق.
+            </p>
+            <div
+              class="bg-white p-3 w-50 mx-auto text-center rounded-4 btn-box"
+              id="startNowHomeBox"
+            >
+              <a href="./register.html" class="">ابدأ رحلتك الآن</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- footer -->
+        <footer class="pt-5">
+          <div class="container text-center text-lg-end">
+            <div class="row g-3">
+              <div class="col col-12 col-lg-6">
+                <h4>
+                  <i
+                    class="fa-solid fa-shield-halved border p-1 rounded bg-white"
+                    style="color: #1e40af"
+                  ></i>
+                  وَثِّق
+                </h4>
+                <p class="w-75 mx-auto mx-lg-0">
+                  نظامك الذكي للتذكير بتجديد الوثائق الرسمية، مصمم خصيصاً لتوفير
+                  وقتك وجهدك وضمان التزامك بالمواعيد القانونية.
+                </p>
+              </div>
+              <div class="col col-12 col-lg-3">
+                <h4>روابط سريعة</h4>
+                <ul>
+                  <li class="py-2">
+                    <a href="#depends" class="text-dark">عن المنصة</a>
+                  </li>
+
+                  <li class="py-2">
+                    <a href="./condition.html" class="text-dark">
+                      الشروط والأحكام</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="col col-12 col-lg-3">
+                <h4>تواصل معنا</h4>
+                <ul>
+                  <li class="py-2">
+                    <a href="mailto:abdoayman1855@gmail.com" class="text-dark"
+                      >support@wathiq.eg</a
+                    >
+                  </li>
+                  <li class="py-2">
+                    <a href="https://wa.me/201025036296" class="text-dark">
+                      201025036296+</a
+                    >
+                  </li>
+                  <li
+                    class="p-3 text-center rounded-4 contactUs-footer w-75 mx-auto mx-lg-0"
+                    id="countactBtn"
+                  >
+                    <i
+                      class="fa-solid fa-phone-volume fa-fade"
+                      style="color: rgb(255, 255, 255)"
+                    ></i>
+                    <a href="./contactUS.html" class="text-white">
+                      تواصل معنا</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </section>
+    </main>
+    <!-- loader -->
+    <div
+      id="loooder"
+      class="lood d-flex align-items-center justify-content-center d-none"
+    >
+      <!-- From Uiverse.io by mobinkakei -->
+      <div id="wifi-loader">
+        <svg class="circle-outer" viewBox="0 0 86 86">
+          <circle class="back" cx="43" cy="43" r="40"></circle>
+          <circle class="front" cx="43" cy="43" r="40"></circle>
+          <circle class="new" cx="43" cy="43" r="40"></circle>
+        </svg>
+        <svg class="circle-middle" viewBox="0 0 60 60">
+          <circle class="back" cx="30" cy="30" r="27"></circle>
+          <circle class="front" cx="30" cy="30" r="27"></circle>
+        </svg>
+        <svg class="circle-inner" viewBox="0 0 34 34">
+          <circle class="back" cx="17" cy="17" r="14"></circle>
+          <circle class="front" cx="17" cy="17" r="14"></circle>
+        </svg>
+        <div class="text fs-4 fw-bold" data-text="...Loading"></div>
+      </div>
+    </div>
+    <!-- end footer -->
+    <div
+      class="foot py-4 border-top border-1 border-secondary-subtle text-center text-secondary bg-secondary-subtle"
+    >
+      <h5 class="">جميع الحقوق محفوظة لمنصة وثق © 2026</h5>
+      <p class="h6">
+        باستخدامك لمنصة وَثِّق، فإنك توافق على الشروط والأحكام الخاصة باستخدام
+        خدمات إدارة وتجديد الوثائق الرسمية.
+      </p>
+    </div>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- mainJs -->
+    <script src="js/index.js"></script>
+    <script src="js/mmode.js"></script>
+  </body>
+</html>

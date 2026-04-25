@@ -1,0 +1,77 @@
+/* abdo & hasnaa */
+/* -----------start-contact----------- */
+#contact {
+  background-color: #faf6f6;
+}
+#contact h2 {
+  font-weight: 900;
+  font-size: 40px;
+  position: relative;
+  /* padding: 10px 0; */
+  z-index: 2;
+}
+#contact h2::after {
+  content: "";
+  background-image: url(../images/dots.png);
+  /* background-color: aqua; */
+  width: 260px;
+  height: 33px;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+#contact .contact-caption {
+  transition: all 0.5s;
+}
+#contact .contact-caption:hover {
+  box-shadow: 3px 4px 7px 0 #1c446b;
+  transform: translateY(10px);
+}
+#contact .contact-caption i {
+  padding: 15px;
+  background-color: #c9c9c9;
+  margin: 20px 0;
+  border-radius: 50%;
+  font-size: 25px;
+  color: var(--main-color);
+  /* cursor: pointer; */
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+}
+#contact .contact-caption:hover i {
+  color: #c9c9c9;
+  background-color: #16589a;
+}
+#contact .contact-caption h3 {
+  font-weight: 700;
+  font-size: 16px;
+}
+#contact .form-control {
+  background-color: #faf3f3;
+  /* box-shadow: none; */
+  border: 0 solid #000;
+  box-shadow: 2px 3px 6px 0px #00000033;
+}
+
+#contact input:focus,
+textarea:focus {
+  box-shadow: 3px 4px 7px 0 #1c446b !important;
+}
+#contact .btn1 {
+  background-color: #16589a;
+  color: #fff;
+  border: none;
+  box-shadow: 10px 10px 10px 0 #000;
+  transition:
+    box-shadow 0.5s,
+    transform 0.5s;
+}
+#contact .btn1:hover {
+  box-shadow: none;
+  transform: translate(10px, 10px);
+  cursor: pointer;
+}
+/* -----------end-contact----------- */

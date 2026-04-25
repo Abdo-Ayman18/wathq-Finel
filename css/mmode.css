@@ -1,0 +1,195 @@
+/* ================= DARK THEME ROOT ================= */
+body.dark {
+  --main-color: #0b1220;
+  --text-color: #565a60; /* رمادي غامق مريح */
+  --span-color: #38bdf8;
+  --content-text-color: #5b6169; /* رمادي متوسط */
+  --buttom-color: #1d4ed8;
+
+  --sideBarText: #cbd5e1;
+  --primary-100: #0f172a;
+  --primary-500: #0b1220;
+
+  --slate-100: #0b1220;
+  --slate-600: #9ca3af;
+  --slate-700: #e5e7eb;
+
+  background: #0b1220 !important;
+  color: #768396 !important;
+}
+
+/* ================= GENERAL TEXT ================= */
+body.dark p,
+body.dark a,
+body.dark span,
+body.dark li,
+body.dark small,
+body.dark label {
+  color: #818997 !important;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5 {
+  color: #e5e7eb !important;
+}
+
+/* ================= SECTIONS / CARDS ================= */
+body.dark .card,
+body.dark element.style,
+body.dark .box,
+body.dark .service-card,
+body.dark .document-card,
+body.dark .custom-card-id,
+body.dark .stats-card,
+body.dark .map-details-container,
+body.dark .main-card {
+  background-color: #0f172a !important;
+  color: #d1d5db !important;
+  border-color: #1e293b !important;
+}
+
+/* ================= NAVBAR / FOOTER ================= */
+
+body.dark footer,
+body.dark .foot {
+  background-color: #0b1220 !important;
+  color: #d1d5db !important;
+  border-color: #1e293b !important;
+}
+
+/* ================= PAGES BACKGROUND ================= */
+body.dark #dashboard,
+body.dark #renewal-guide-des,
+body.dark #notifications-log,
+body.dark #contact,
+body.dark #add,
+body.dark #addNewDos {
+  background: #0b1220 !important;
+}
+
+/* ================= FORMS ================= */
+body.dark input,
+body.dark textarea,
+body.dark select,
+body.dark .form-control,
+body.dark .form-select {
+  background-color: #0f172a !important;
+  color: #d1d5db !important;
+  border: 1px solid #1e293b !important;
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder {
+  color: #6b7280 !important;
+}
+
+/* ================= BUTTONS ================= */
+body.dark .btn,
+body.dark .btn1,
+body.dark .btn-add,
+body.dark .login-btn,
+body.dark .register-btn {
+  box-shadow: none !important;
+}
+
+/* ================= LOADER ================= */
+body.dark .lood {
+  background-color: #0b1220e6 !important;
+}
+
+/* ================= BOOTSTRAP FIX ================= */
+body.dark .nav-pills .nav-link {
+  color: #9ca3af !important;
+  background: #0f172a !important;
+  border: 1px solid #1e293b !important;
+}
+
+body.dark .nav-pills .nav-link.active {
+  color: #e5e7eb !important;
+  background: #1e293b !important;
+}
+
+body.dark .accordion-item,
+body.dark .accordion-button {
+  background: #0f172a !important;
+  color: #d1d5db !important;
+  border-color: #1e293b !important;
+}
+
+body.dark .accordion-button:not(.collapsed) {
+  background: #1e293b !important;
+  color: #e5e7eb !important;
+}
+
+/* ================= TABLES ================= */
+body.dark table,
+body.dark #bull {
+  color: #d1d5db !important;
+}
+
+body.dark thead {
+  background: #1e293b !important;
+}
+
+body.dark tbody tr {
+  border-color: #1e293b !important;
+}
+
+body.dark tbody tr:hover {
+  background: #0b1220 !important;
+}
+
+/* ================= SCROLLBAR ================= */
+body.dark ::-webkit-scrollbar {
+  width: 10px;
+}
+
+body.dark ::-webkit-scrollbar-track {
+  background: #0b1220;
+}
+
+body.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
+
+/* ================= FORCE DARK BACKGROUNDS ================= */
+body.dark [class*="bg-"],
+body.dark .bg-white {
+  background-color: #0f172a !important;
+}
+
+/* ================= SIDEBAR BUTTON (FIX FINAL) ================= */
+body.dark button.sidebar-toggle,
+body.dark button.aside-toggle,
+body.dark #sidebarToggle,
+body.dark .sidebar-toggle,
+body.dark .aside-toggle {
+  background-color: #f1f5f9 !important; /* فاتح */
+  color: #111827 !important; /* غامق */
+  border: 1px solid #cbd5e1 !important;
+  opacity: 1 !important;
+  box-shadow: none !important;
+}
+
+/* أيقونة الزر */
+body.dark .sidebar-toggle i,
+body.dark .aside-toggle i,
+body.dark #sidebarToggle i {
+  color: #111827 !important;
+}
+
+/* hover */
+body.dark .sidebar-toggle:hover,
+body.dark .aside-toggle:hover,
+body.dark #sidebarToggle:hover {
+  background-color: #e2e8f0 !important;
+}
+body.dark .navSearch,
+body.dark .navbar-toggler {
+  background-color: #39435d !important;
+  border: none;
+}

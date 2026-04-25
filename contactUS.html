@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>وَثِّق / تواصل معنا</title>
+    <link
+      rel="shortcut icon"
+      href="images/logo/main-logo.png"
+      type="image/x-icon"
+    />
+    <!-- font cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- bootstrab -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- mainStyle -->
+    <link rel="stylesheet" href="css/contactUs.css" />
+
+    <link rel="stylesheet" href="css/mainStyle.css" />
+    <link rel="stylesheet" href="css/mmode.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar fixed-top border-bottom border-black shadow-lg">
+      <div class="container">
+        <a class="navbar-brand text-white fs-3 fw-bold" href="#"
+          ><i
+            class="fa-solid fa-shield-halved border p-1 rounded bg-white"
+            style="color: #1e40af"
+          ></i>
+          وَثِّق
+        </a>
+
+        <div class="">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div
+          class="offcanvas offcanvas-start aside-color"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header text-white">
+            <button
+              type="button "
+              class="btn-close bg-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+            <h4 class="offcanvas-title text-white" id="offcanvasNavbarLabel">
+              <i
+                class="fa-solid fa-shield-halved border p-1 rounded bg-white"
+                style="color: #1e40af"
+              ></i>
+              وَثِّق
+            </h4>
+          </div>
+          <div class="offcanvas-body d-flex flex-column">
+            <hr />
+            <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a
+                  class="nav-link active text-white"
+                  aria-current="page"
+                  href="./index.html"
+                  ><i class="fas fa-regular fa-house"></i> الصفحه الرئسيه
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./notifications.html"
+                  ><img
+                    src="images/logo/nav-icon-bell.png"
+                    alt="nav-icon-bell"
+                  />
+                  سجل التنبيهات
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./add.html"
+                  ><img
+                    src="images/logo/nav-icon-docs.png"
+                    alt="nav-icon-docs"
+                  />
+                  قائمه الوثائق
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./addNewDos.html"
+                  ><img src="images/logo/nav-add.png" alt="nav-add" /> إضافه
+                  وثيقه
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./dashbord.html"
+                  ><img src="images/logo/nav-icon-dash.png" alt="" /> لوحه تحكم
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./renewal.html"
+                  ><i
+                    class="fa-solid fa-person-walking-arrow-loop-left"
+                    style="color: rgb(255, 255, 255)"
+                  ></i>
+                  دليل تجديد الوثائق</a
+                >
+              </li>
+              <li class="nav-item bg-secondary px-2 rounded">
+                <a class="nav-link text-white" href="./contactUS.html"
+                  ><i
+                    class="fa-solid fa-phone-volume"
+                    style="color: rgb(255, 255, 255)"
+                  ></i>
+                  تواصل معنا</a
+                >
+              </li>
+            </ul>
+            <hr />
+            <ul class="navbar-nav mt-auto">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link text-white"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  <i class="fa-solid fa-gear fa-spin" style="color: #fff"></i>
+                  إعدادات
+                </a>
+
+                <ul class="dropdown-menu text-center bg-dark-subtle">
+                  <li>
+                    <span class="dark-iecon">
+                      <i
+                        class="fa-solid fa-moon fs-4"
+                        style="color: #ffc800"
+                      ></i>
+                    </span>
+                  </li>
+
+                  <li><hr class="dropdown-divider" /></li>
+
+                  <li>
+                    <a class="nav-link text-black" href="./profiel.html">
+                      <i class="fa-regular fa-user fs-5"></i>
+                    </a>
+                  </li>
+
+                  <li><hr class="dropdown-divider" /></li>
+                  <li id="logOut">تسجيل الخروج</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="mt-5 pt-4">
+      <!-- contact Us -->
+      <section id="contact" class="">
+        <div class="container w-75 m-auto">
+          <div class="mb-5">
+            <h2 class="text-center pt-5 pb-3">تواصل معنا</h2>
+            <p class="lead small text-center">
+              تواصل معنا في أي وقت للحصول على المساعدة أو لطرح الأسئلة أو تقديم
+              الملاحظات أو الاستفسارات التجارية
+            </p>
+          </div>
+          <div class="row row-cols-1 row-cols-lg-3 g-4 text-center">
+            <div class="col">
+              <div class="contact-caption h-100 py-3 rounded-2">
+                <span><i class="fa-solid fa-location-arrow"></i></span>
+                <h3>العنوان</h3>
+                <a
+                  href="https://maps.app.goo.gl/MGviXsChqP2cszL4A"
+                  target="_blank"
+                  class="lead fs-6 text-dark text-decoration-none"
+                  >Mansoura-Talkha-Mansoura/Damietta Road</a
+                >
+              </div>
+            </div>
+            <div class="col">
+              <div class="contact-caption h-100 py-3 rounded-2">
+                <span><i class="fa-solid fa-envelope"></i></span>
+                <h3>البريد الإلكتروني</h3>
+                <a href="mailto:abdoayman1855@gmail.com" class="text-dark"
+                  >support@wathiq.eg</a
+                >
+              </div>
+            </div>
+            <div class="col">
+              <div class="contact-caption h-100 py-3 rounded-2">
+                <span><i class="fa-solid fa-phone"></i></span>
+                <h3>رقم الهاتف</h3>
+                <a href="https://wa.me/201025036296" class="text-dark">
+                  201025036296+</a
+                >
+              </div>
+            </div>
+          </div>
+          <form class="py-5">
+            <div class="row g-3">
+              <div class="col col-12 col-lg-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="الاسم"
+                  aria-label=" name"
+                  name="name"
+                  required
+                />
+              </div>
+              <div class="col col-12 col-lg-6">
+                <input
+                  type="Email"
+                  class="form-control"
+                  placeholder="البريد الإلكتروني"
+                  aria-label="Email"
+                  name="email"
+                  required
+                />
+              </div>
+              <div class="col col-12 col-lg-6">
+                <input
+                  type="Phone"
+                  class="form-control"
+                  placeholder="رقم الهاتف"
+                  aria-label="Phone"
+                  name="Phone"
+                  required
+                />
+              </div>
+              <div class="col col-12 col-lg-6">
+                <input
+                  type="Address"
+                  class="form-control"
+                  placeholder="العنوان"
+                  aria-label="Address"
+                  name="Address"
+                />
+              </div>
+            </div>
+            <div class="my-3">
+              <textarea
+                class="form-control"
+                name="Message"
+                placeholder="ملاحظاتك..."
+                id="textera"
+                style="height: 150px"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn1 px-5 py-2 rounded-3">
+              ارسال
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <!-- loader -->
+    <div
+      id="loooder"
+      class="lood d-flex align-items-center justify-content-center d-none"
+    >
+      <!-- From Uiverse.io by mobinkakei -->
+      <div id="wifi-loader">
+        <svg class="circle-outer" viewBox="0 0 86 86">
+          <circle class="back" cx="43" cy="43" r="40"></circle>
+          <circle class="front" cx="43" cy="43" r="40"></circle>
+          <circle class="new" cx="43" cy="43" r="40"></circle>
+        </svg>
+        <svg class="circle-middle" viewBox="0 0 60 60">
+          <circle class="back" cx="30" cy="30" r="27"></circle>
+          <circle class="front" cx="30" cy="30" r="27"></circle>
+        </svg>
+        <svg class="circle-inner" viewBox="0 0 34 34">
+          <circle class="back" cx="17" cy="17" r="14"></circle>
+          <circle class="front" cx="17" cy="17" r="14"></circle>
+        </svg>
+        <div class="text fs-4 fw-bold" data-text="...Loading"></div>
+      </div>
+    </div>
+    <!-- end footer -->
+    <div
+      class="foot py-4 border-top border-1 border-secondary-subtle text-center text-secondary bg-secondary-subtle"
+    >
+      <h5 class="">جميع الحقوق محفوظة لمنصة وثق © 2026</h5>
+      <p class="h6">
+        باستخدامك لمنصة وَثِّق، فإنك توافق على الشروط والأحكام الخاصة باستخدام
+        خدمات إدارة وتجديد الوثائق الرسمية.
+      </p>
+    </div>
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- mainJs -->
+    <script src="js/mmode.js"></script>
+  </body>
+</html>

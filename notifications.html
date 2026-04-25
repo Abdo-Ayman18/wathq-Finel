@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <script src="./js/gardApp.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>وَثِّق / سجل التبيهات</title>
+    <link
+      rel="shortcut icon"
+      href="images/logo/main-logo.png"
+      type="image/x-icon"
+    />
+    <!-- font cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- bootstrab -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- mainStyle -->
+
+    <link rel="stylesheet" href="css/notifications.css" />
+
+    <link rel="stylesheet" href="css/mainStyle.css" />
+    <link rel="stylesheet" href="css/mmode.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar fixed-top border-bottom border-black shadow-lg">
+      <div class="container">
+        <a class="navbar-brand text-white fs-3 fw-bold" href="#"
+          ><i
+            class="fa-solid fa-shield-halved border p-1 rounded bg-white"
+            style="color: #1e40af"
+          ></i>
+          وَثِّق
+        </a>
+
+        <div class="">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div
+          class="offcanvas offcanvas-start aside-color"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header text-white">
+            <button
+              type="button "
+              class="btn-close bg-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+            <h4 class="offcanvas-title text-white" id="offcanvasNavbarLabel">
+              <i
+                class="fa-solid fa-shield-halved border p-1 rounded bg-white"
+                style="color: #1e40af"
+              ></i>
+              وَثِّق
+            </h4>
+          </div>
+          <div class="offcanvas-body d-flex flex-column">
+            <hr />
+            <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a
+                  class="nav-link active text-white"
+                  aria-current="page"
+                  href="./index.html"
+                  ><i class="fas fa-regular fa-house"></i> الصفحه الرئسيه
+                </a>
+              </li>
+              <li class="nav-item bg-secondary px-2 rounded">
+                <a class="nav-link text-white" href="./notifications.html"
+                  ><img
+                    src="images/logo/nav-icon-bell.png"
+                    alt="nav-icon-bell"
+                  />
+                  سجل التنبيهات
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./add.html"
+                  ><img
+                    src="images/logo/nav-icon-docs.png"
+                    alt="nav-icon-docs"
+                  />
+                  قائمه الوثائق
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./addNewDos.html"
+                  ><img src="images/logo/nav-add.png" alt="nav-add" /> إضافه
+                  وثيقه
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./dashbord.html"
+                  ><img src="images/logo/nav-icon-dash.png" alt="" /> لوحه تحكم
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./renewal.html"
+                  ><i
+                    class="fa-solid fa-person-walking-arrow-loop-left"
+                    style="color: rgb(255, 255, 255)"
+                  ></i>
+                  دليل تجديد الوثائق</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./contactUS.html"
+                  ><i
+                    class="fa-solid fa-phone-volume"
+                    style="color: rgb(255, 255, 255)"
+                  ></i>
+                  تواصل معنا</a
+                >
+              </li>
+            </ul>
+            <hr />
+            <ul class="navbar-nav mt-auto">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link text-white"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  <i class="fa-solid fa-gear fa-spin" style="color: #fff"></i>
+                  إعدادات
+                </a>
+
+                <ul class="dropdown-menu text-center bg-dark-subtle">
+                  <li>
+                    <span class="dark-iecon">
+                      <i
+                        class="fa-solid fa-moon fs-4"
+                        style="color: #ffc800"
+                      ></i>
+                    </span>
+                  </li>
+
+                  <li><hr class="dropdown-divider" /></li>
+
+                  <li>
+                    <a class="nav-link text-black" href="./profiel.html">
+                      <i class="fa-regular fa-user fs-5"></i>
+                    </a>
+                  </li>
+
+                  <li><hr class="dropdown-divider" /></li>
+                  <li id="logOut">تسجيل الخروج</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="mt-5 pt-4">
+      <!-- Notifications Log Section     سجل التنبيهات والتعليمات -->
+      <section id="notifications-log" class="">
+        <div class="container py-3">
+          <!-- Header and Nearest Alert / العنوان وأقرب تنبيه -->
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-2"
+          >
+            <!-- Section Title / عنوان القسم -->
+            <div class="text-end order-md-1 mt-3">
+              <h2 class="main-heading fw-bold mb-1">
+                سجل التنبيهات والتعليمات
+              </h2>
+              <p class="sub-heading text-muted mb-0">
+                تابع سجل إشعاراتك وتعرف على خطوات تجديد وثائقك في مصر.
+              </p>
+            </div>
+
+            <!-- Nearest Alert Box / صندوق أقرب تنبيه -->
+            <div
+              class="alert-box-custom d-flex align-items-center mt-3 p-2 order-md-2"
+            >
+              <div class="text-end">
+                <div class="label-text">أقرب تنبيه</div>
+                <div class="time-text fw-bold" id="nearestAlert">--</div>
+              </div>
+              <div
+                class="icon-square d-flex align-items-center justify-content-center me-2"
+              >
+                <i class="fa-regular fa-clock"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Top Links and Buttons / روابط وأزرار علوية -->
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between align-items-center pt-4"
+          >
+            <div
+              class="d-flex align-items-center gap-4 order-md-1 flex-wrap justify-content-center"
+            >
+              <!-- Notifications Log Link / رابط سجل الإشعارات -->
+              <div class="d-flex align-items-center gap-2 link-item ms-5 ps-5">
+                <!-- <span id="notiCount" class="badge bg-danger">0</span>
+                <i class="fa-solid fa-clock-rotate-left fs-5"></i> -->
+                <a
+                  href="./dashbord.html"
+                  class="mb-0 text-dark fs-5 fw-bold main-text-color ms-5"
+                >
+                  <span id="notiCount" class="badge bg-danger">0</span>
+                  <i class="fa-solid fa-clock-rotate-left fs-5"></i>
+                  سجل الإشعارات
+                </a>
+              </div>
+
+              <!-- Clear All and Guide Links / رابط مسح الكل ودليل التجديد -->
+              <div class="d-flex align-items-center gap-2 link-item">
+                <a
+                  href="#"
+                  class="text-decoration-none clear-all-btn fw-bold small px-5 me-5 d-none"
+                  >مسح الكل</a
+                >
+                <div class="px-5">
+                  <img
+                    src="images/logo/title-guide-icon.png"
+                    alt="title-guide-icon"
+                  />
+                  <span class="fw-bold main-text-color">
+                    <a
+                      href="https://www.psm.gov.eg/?"
+                      target="_blank"
+                      class="text-decoration-none"
+                    >
+                      دليل التجديد في مصر</a
+                    >
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Search and Category Buttons / أزرار البحث والتصنيفات -->
+            <div class="d-flex gap-2 mt-3 mt-md-0 order-md-2">
+              <button class="btn btn-search-style rounded-pill px-4 shadow-sm">
+                الأكثر بحثاً
+              </button>
+              <button
+                class="btn btn-light rounded-pill px-4 category-btn border"
+              >
+                تصنيفات
+              </button>
+            </div>
+          </div>
+
+          <!-- Main Cards Section / قسم البطاقات الرئيسية -->
+          <div class="py-5">
+            <div class="row g-4" dir="rtl">
+              <!-- Notifications Timeline Card / بطاقة الجدول الزمني للإشعارات -->
+              <div class="col-lg-4 col-md-12">
+                <div
+                  class="custom-card-id p-0 overflow-hidden d-flex flex-column h-100"
+                >
+                  <div
+                    class="timeline-container p-4 flex-grow-1 position-relative"
+                  >
+                    <!-- خط الـ timeline -->
+                    <div class="timeline-line-right"></div>
+
+                    <!-- هنا الإشعارات هتترسم ديناميك -->
+                    <div id="notiTimeline"></div>
+                  </div>
+
+                  <!-- زرار عرض السجل -->
+                  <a href="./add.html" class="btn-note p-3 text-black">
+                    عرض السجل الكامل
+                  </a>
+                </div>
+              </div>
+
+              <!-- Passport Renewal Card / بطاقة تجديد جواز السفر -->
+              <div class="col-lg-4 col-md-6">
+                <div class="custom-card-id">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-4"
+                  >
+                    <div class="icon-wrap bg-blue-soft">
+                      <i class="fa-solid fa-plane"></i>
+                    </div>
+                    <span class="label-badge">إدارة الجوازات</span>
+                  </div>
+                  <div class="text-end">
+                    <h5 class="fw-bold mb-2">تجديد جواز السفر</h5>
+                    <p class="text-secondary small mb-4">
+                      تعرف على خطوات استخراج أو تجديد جواز السفر المصري المميكن
+                      والرسوم المطلوبة.
+                    </p>
+                    <div class="requirements-box">
+                      <h6 class="fw-bold text-primary small mb-3">
+                        الأوراق المطلوبة:
+                      </h6>
+                      <ul class="list-unstyled p-0 m-0">
+                        <li class="mb-2 small d-flex align-items-center">
+                          <i class="fa-solid fa-check text-success"></i>
+                          <span class="pe-2"
+                            >أصل بطاقة الرقم القومي سارية.</span
+                          >
+                        </li>
+                        <li class="mb-2 small d-flex align-items-center">
+                          <i class="fa-solid fa-check text-success"></i>
+                          <span class="pe-2"
+                            >3 صور ملونة (خلفية بيضاء) حديثة.</span
+                          >
+                        </li>
+                        <li class="small d-flex align-items-center">
+                          <i class="fa-solid fa-check text-success"></i>
+                          <span class="pe-2"
+                            >المؤهل الدراسي (إذا لم يكن في البطاقة).</span
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- Official Website Link / رابط الموقع الرسمي -->
+                  <div class="pt-3 mt-3 border-top">
+                    <!-- blue-link -->
+                    <a
+                      href="https://moi.gov.eg/passports/home/getpassport?"
+                      target="_blank"
+                      class="py-3 footer-action btn btn-outline-info"
+                    >
+                      <i class="fa-solid fa-external-link-alt ms-auto"></i>
+                      <span>زيارة الموقع الرسمي</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- National ID Renewal Card / بطاقة تجديد بطاقة الرقم القومي -->
+              <div class="col-lg-4 col-md-6">
+                <div class="custom-card-id">
+                  <div
+                    class="d-flex align-items-center justify-content-between mb-4"
+                  >
+                    <div class="icon-wrap bg-orange-soft">
+                      <i class="fa-solid fa-id-card"></i>
+                    </div>
+                    <span class="label-badge">الأحوال المدنية</span>
+                  </div>
+                  <div class="text-end">
+                    <h5 class="fw-bold mb-2">تجديد بطاقة الرقم القومي</h5>
+                    <p class="text-secondary small mb-4">
+                      إجراءات تجديد البطاقة الشخصية سواء العادية أو المستعجلة
+                      (VIP) من مكاتب السجل المدني.
+                    </p>
+                    <div class="requirements-box">
+                      <h6 class="fw-bold pepar-text-orange small mb-3">
+                        الأوراق المطلوبة:
+                      </h6>
+                      <ul class="list-unstyled p-0 m-0">
+                        <li class="mb-2 small d-flex align-items-center">
+                          <i class="fa-solid fa-check text-success"></i>
+                          <span class="pe-2">شراء استمارة الرقم القومي.</span>
+                        </li>
+                        <li class="mb-2 small d-flex align-items-center">
+                          <i class="fa-solid fa-check text-success"></i>
+                          <span class="pe-2"
+                            >البطاقة القديمة أو ضامن (قريب درجة أولى).</span
+                          >
+                        </li>
+                        <li class="small d-flex align-items-center">
+                          <i class="fa-solid fa-check text-success"></i>
+                          <span class="pe-2"
+                            >وثيقة الحالة الاجتماعية والوظيفية.</span
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- Ministry Portal Link / رابط بوابة وزارة الداخلية -->
+
+                  <div class="pt-3 mt-3 border-top">
+                    <!-- orange-link -->
+                    <a
+                      href="https://www.moi.gov.eg/home?"
+                      target="_blank"
+                      class="footer-action btn btn-outline-warning p-3"
+                    >
+                      <i class="fa-solid fa-external-link-alt ms-auto"></i>
+                      <span>بوابة وزارة الداخلية</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Location Map and Promo Banner / الخريطة والبانر الدعائي -->
+          <div class="custom-location-component">
+            <!-- Promo Banner Card / بطاقة البانر الدعائي -->
+            <div class="promo-banner-card">
+              <div class="row align-items-center">
+                <div class="px-5 col-lg-8 col-md-7 content-side">
+                  <h2 class="banner-title">
+                    هل تحتاج لمساعدة في تحديد أقرب سجل مدني؟
+                  </h2>
+                  <p class="banner-desc">
+                    استخدم خريطة وثق الذكية للوصول إلى أقرب جهة حكومية لموقعك
+                    الحالي في مصر وتعرف على مواعيد العمل الرسمية.
+                  </p>
+                  <a
+                    href="https://maps.app.goo.gl/tkaaZuUsaDYvuENX9"
+                    target="_blank"
+                    class="btn-interactive-map"
+                  >
+                    <i class="bi bi-map"></i> فتح الخريطة التفاعلية
+                  </a>
+                </div>
+                <div class="col-lg-4 col-md-5 Passport-an-id img-side">
+                  <img
+                    src="images/Passport and ID.png"
+                    alt="Passport and ID"
+                    class="w-100"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Map and Branches / الخريطة والفروع -->
+            <div class="map-details-container mb-5">
+              <div class="section-header">
+                <i class="bi bi-geo-alt-fill text-primary"></i>
+                <span class="header-text">أقرب فرع سجل مدني في المنصوره</span>
+              </div>
+
+              <!-- Embedded Google Map / خريطة جوجل مدمجة -->
+              <div class="map-visual-area">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d41619.32840202931!2d31.386209454192855!3d31.046004556332733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z2LPYrNmEINmG2K_ZhtmKINin2YTZhdmG2LXZiNix2Yc!5e1!3m2!1sen!2seg!4v1773424118669!5m2!1sen!2seg"
+                  width="100%"
+                  height="100%"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                ></iframe>
+              </div>
+
+              <!-- Branch List / قائمة الفروع -->
+              <div class="row branches-info-row mt-4">
+                <div class="col-md-9 mb-3">
+                  <div class="branch-item">
+                    <div class="icon-send"><i class="bi bi-send-fill"></i></div>
+                    <div class="branch-text">
+                      <h6 class="branch-name">مجمع سجلات المنصوره</h6>
+                      <p class="branch-location">
+                        شارع الجيش – قسم ثان المنصورة.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="branch-item">
+                    <div class="icon-send"><i class="bi bi-send-fill"></i></div>
+                    <div class="branch-text">
+                      <h6 class="branch-name">فرع طلخا</h6>
+                      <p class="branch-location">
+                        شارع الشهيد عاطف الشرقاوي، مدينة طلخا
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- loader -->
+    <div
+      id="loooder"
+      class="lood d-flex align-items-center justify-content-center d-none"
+    >
+      <!-- From Uiverse.io by mobinkakei -->
+      <div id="wifi-loader">
+        <svg class="circle-outer" viewBox="0 0 86 86">
+          <circle class="back" cx="43" cy="43" r="40"></circle>
+          <circle class="front" cx="43" cy="43" r="40"></circle>
+          <circle class="new" cx="43" cy="43" r="40"></circle>
+        </svg>
+        <svg class="circle-middle" viewBox="0 0 60 60">
+          <circle class="back" cx="30" cy="30" r="27"></circle>
+          <circle class="front" cx="30" cy="30" r="27"></circle>
+        </svg>
+        <svg class="circle-inner" viewBox="0 0 34 34">
+          <circle class="back" cx="17" cy="17" r="14"></circle>
+          <circle class="front" cx="17" cy="17" r="14"></circle>
+        </svg>
+        <div class="text fs-4 fw-bold" data-text="...Loading"></div>
+      </div>
+    </div>
+
+    <!-- end footer -->
+    <div
+      class="foot py-4 border-top border-1 border-secondary-subtle text-center text-secondary bg-secondary-subtle"
+    >
+      <h5 class="">جميع الحقوق محفوظة لمنصة وثق © 2026</h5>
+      <p class="h6">
+        باستخدامك لمنصة وَثِّق، فإنك توافق على الشروط والأحكام الخاصة باستخدام
+        خدمات إدارة وتجديد الوثائق الرسمية.
+      </p>
+    </div>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- mainJs -->
+    <script src="js/notifications.js"></script>
+    <script src="js/mas.js"></script>
+    <script src="js/mmode.js"></script>
+    s
+  </body>
+</html>

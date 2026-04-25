@@ -1,0 +1,898 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <script src="./js/gardApp.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>وَثِّق / وثائقي الرسميه</title>
+    <link
+      rel="shortcut icon"
+      href="images/logo/main-logo.png"
+      type="image/x-icon"
+    />
+    <!-- font cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- bootstrab -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- mainStyle -->
+
+    <link rel="stylesheet" href="css/mainStyle.css" />
+    <link rel="stylesheet" href="css/addDos.css" />
+    <link rel="stylesheet" href="css/mmode.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar fixed-top border-bottom border-black shadow-lg">
+      <div class="container">
+        <a class="navbar-brand text-white fs-3 fw-bold" href="#"
+          ><i
+            class="fa-solid fa-shield-halved border p-1 rounded bg-white"
+            style="color: #1e40af"
+          ></i>
+          وَثِّق
+        </a>
+
+        <div class="search d-flex align-items-center justify-content-center">
+          <!-- ====== زرار الجرس ====== -->
+          <div class="dropdown">
+            <!-- زرار فتح الإشعارات -->
+            <button
+              class="btn position-relative"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <!-- أيقونة الجرس -->
+              <i id="bull" class="fa-solid fa-bell fs-5"></i>
+
+              <!-- عدد الإشعارات (Badge فوق الجرس) -->
+              <span
+                id="notiCount"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              >
+                0
+              </span>
+            </button>
+
+            <!-- قائمة الإشعارات اللي هتظهر -->
+            <ul
+              id="notiList"
+              class="dropdown-menu dropdown-menu-end shadow"
+              style="width: 500px; min-height: 100%; overflow-y: auto"
+            ></ul>
+          </div>
+
+          <input
+            id="searchInput"
+            oninput="searcData()"
+            type="search"
+            placeholder=" بحث عن وثيقه "
+            class="navSearch px-lg-1 py-lg-2 mx-lg-5 w-100 rounded-3"
+          />
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center">
+          <!-- <span class="btn btn-outline-light ms-4" id="signInNav">تسجيل الدخول</span> -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div
+          class="offcanvas offcanvas-start aside-color"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header text-white">
+            <button
+              type="button "
+              class="btn-close bg-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+            <h4 class="offcanvas-title text-white" id="offcanvasNavbarLabel">
+              <i
+                class="fa-solid fa-shield-halved border p-1 rounded bg-white"
+                style="color: #1e40af"
+              ></i>
+              وَثِّق
+            </h4>
+          </div>
+          <div class="offcanvas-body d-flex flex-column">
+            <hr />
+            <ul class="menue navbar-nav justify-content-start flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a
+                  class="nav-link active text-white"
+                  aria-current="page"
+                  href="./index.html"
+                  ><i class="fas fa-regular fa-house"></i> الصفحه الرئسيه
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./notifications.html"
+                  ><img
+                    src="images/logo/nav-icon-bell.png"
+                    alt="nav-icon-bell"
+                  />
+                  سجل التنبيهات
+                </a>
+              </li>
+              <li class="nav-item bg-secondary px-2 rounded">
+                <a class="nav-link text-white" href="./add.html"
+                  ><img
+                    src="images/logo/nav-icon-docs.png"
+                    alt="nav-icon-docs"
+                  />
+                  قائمه الوثائق
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./addNewDos.html"
+                  ><img src="images/logo/nav-add.png" alt="nav-add" /> إضافه
+                  وثيقه
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./dashbord.html"
+                  ><img src="images/logo/nav-icon-dash.png" alt="" /> لوحه تحكم
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./renewal.html"
+                  ><i
+                    class="fa-solid fa-person-walking-arrow-loop-left"
+                    style="color: rgb(255, 255, 255)"
+                  ></i>
+                  دليل تجديد الوثائق</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="./contactUS.html"
+                  ><i
+                    class="fa-solid fa-phone-volume"
+                    style="color: rgb(255, 255, 255)"
+                  ></i>
+                  تواصل معنا</a
+                >
+              </li>
+            </ul>
+            <hr />
+            <ul class="navbar-nav mt-auto">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link text-white"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  <i class="fa-solid fa-gear fa-spin" style="color: #fff"></i>
+                  إعدادات
+                </a>
+
+                <ul class="dropdown-menu text-center bg-dark-subtle">
+                  <li>
+                    <span class="dark-iecon">
+                      <i
+                        class="fa-solid fa-moon fs-4"
+                        style="color: #ffc800"
+                      ></i>
+                    </span>
+                  </li>
+
+                  <li><hr class="dropdown-divider" /></li>
+
+                  <li>
+                    <a class="nav-link text-black" href="./profiel.html">
+                      <i class="fa-regular fa-user fs-5"></i>
+                    </a>
+                  </li>
+
+                  <li><hr class="dropdown-divider" /></li>
+                  <li id="logOut">تسجيل الخروج</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="mt-5 pt-4">
+      <!-- وثائقي الرسمية-->
+      <!-- add -->
+      <section id="add" class="">
+        <div class="container-fluid">
+          <div class="row">
+            <!-- <==========contentAria==========> -->
+            <div class="contentAria py-4">
+              <div class="container">
+                <!-- <==========title==========> -->
+                <div class="title d-flex justify-content-between">
+                  <div class="py-5">
+                    <h2 class="fs-1 fw-bold">وثائقي الرسمية</h2>
+                    <p>اداره وعرض كافه الوثائق المسجله ف حسابك</p>
+                  </div>
+                </div>
+
+                <!-- <==========startNav&tab==========> -->
+                <ul
+                  class="nav nav-pills mb-3 my-tabs d-flex gap-3 overflow-auto"
+                  id="pills-tab"
+                  role="tablist"
+                >
+                  <li class="nav-item item" role="presentation">
+                    <button
+                      class="nav-link active"
+                      id="pills-home-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#pills-all"
+                      type="button"
+                      role="tab"
+                      aria-controls="pills-home"
+                      aria-selected="true"
+                    >
+                      الكل
+                    </button>
+                  </li>
+                  <li class="nav-item item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="pills-profile-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#pills-about"
+                      type="button"
+                      role="tab"
+                      aria-controls="pills-profile"
+                      aria-selected="false"
+                    >
+                      سارية
+                    </button>
+                  </li>
+                  <li class="nav-item item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="pills-contact-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#pills-saryia"
+                      type="button"
+                      role="tab"
+                      aria-controls="pills-contact"
+                      aria-selected="false"
+                    >
+                      قربت تنتهي
+                    </button>
+                  </li>
+                  <li class="nav-item item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="pills-contact-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#pills-end"
+                      type="button"
+                      role="tab"
+                      aria-controls="pills-contact"
+                      aria-selected="false"
+                    >
+                      منتهية
+                    </button>
+                  </li>
+                </ul>
+
+                <div class="tab-content overflow-auto" id="pills-tabContent">
+                  <!-- كولو -->
+                  <div
+                    class="tab-pane fade show active"
+                    id="pills-all"
+                    role="tabpanel"
+                    aria-labelledby="pills-home-tab"
+                    tabindex="0"
+                  >
+                    <!-- <==========table==========> -->
+                    <div class="col-lg-12 tables">
+                      <div
+                        class="rounded shadow border table-responsive overflow-auto"
+                      >
+                        <table class="table">
+                          <!-- nave taber -->
+                          <thead class="table-light">
+                            <tr>
+                              <th
+                                class="py-3"
+                                style="font-size: 0.7875rem; color: #64748b"
+                              >
+                                الوثيقة
+                              </th>
+                              <th
+                                class="py-3"
+                                style="font-size: 0.7875rem; color: #64748b"
+                              >
+                                الجهة المصدرة
+                              </th>
+                              <th
+                                class="py-3"
+                                style="font-size: 0.7875rem; color: #64748b"
+                              >
+                                تاريخ الانتهاء
+                              </th>
+                              <th
+                                class="py-3"
+                                style="font-size: 0.7875rem; color: #64748b"
+                              >
+                                الحالة
+                              </th>
+                              <th
+                                class="py-3"
+                                style="font-size: 0.7875rem; color: #64748b"
+                              >
+                                الإجراءات
+                              </th>
+                            </tr>
+                          </thead>
+                          <!-- all -->
+                          <tbody id="kolo">
+                            <!-- <tr>
+                              <th
+                                class="py-3"
+                                style="font-size: 0.9rem; font-weight: 700"
+                              >
+                                <i
+                                  class="fa-solid fa-id-card"
+                                  style="
+                                    border: 1px solid #e5e7eb;
+                                    color: #1e40af;
+                                    background-color: #78a3d9cb;
+                                    border-radius: 0.375rem;
+                                    padding: 0.375rem;
+                                    font-size: 0.625rem;
+                                  "
+                                ></i>
+                                بطاقة الرقم القومي
+                              </th>
+                              <td
+                                class="py-3"
+                                style="font-size: 0.7875rem; color: #64748b"
+                              >
+                                مصلحة الأحوال المدنية
+                              </td>
+                              <td
+                                class="py-3"
+                                style="font-size: 0.75rem; font-weight: 700"
+                              >
+                                24/10/2028
+                              </td>
+                              <td
+                                class="py-3"
+                                style="font-size: 0.675rem; font-weight: bold"
+                              >
+                                <span
+                                  style="
+                                    color: #10b981;
+                                    border: 1px solid #10b981;
+                                    background-color: #2ef7a6d7;
+                                    padding: 2px 6px;
+                                    border-radius: 6px;
+                                  "
+                                >
+                                  سارية
+                                </span>
+                              </td>
+                              <td class="py-3">
+                                <div class="d-flex">
+                                  <span
+                                    style="color: #99a1af; font-size: 14.4px"
+                                    ><i class="fa-regular fa-eye"></i
+                                  ></span>
+                                  <span
+                                    class="pe-3"
+                                    style="color: #99a1af; font-size: 14.4px"
+                                    ><i class="fa-solid fa-pen"></i
+                                  ></span>
+                                </div>
+                              </td>
+                            </tr> -->
+                          </tbody>
+                          <tfoot class="table-light">
+                            <tr>
+                              <td colspan="5">
+                                <div
+                                  class="d-flex justify-content-end align-items-center px-2"
+                                >
+                                  <p
+                                    id="koloFoter"
+                                    class="mb-0"
+                                    style="
+                                      font-size: 0.7875rem;
+                                      font-weight: 500;
+                                      color: #64748b;
+                                    "
+                                  >
+                                    <!-- عرض 4 من أصل 12 وثيقة -->
+                                  </p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tfoot>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- سساري -->
+                  <div
+                    class="tab-pane fade"
+                    id="pills-about"
+                    role="tabpanel"
+                    aria-labelledby="pills-profile-tab"
+                    tabindex="0"
+                  >
+                    <div class="col-lg-12 tables">
+                      <div class="rounded shadow border overflow-auto">
+                        <table class="table">
+                          <thead class="table-light">
+                            <tr>
+                              <th
+                                class="py-3"
+                                style="font-size: 0.7875rem; color: #64748b"
+                              >
+                                الوثيقة
+                              </th>
+                              <th
+                                class="py-3"
+                                style="font-size: 0.7875rem; color: #64748b"
+                              >
+                                الجهة المصدرة
+                              </th>
+                              <th
+                                class="py-3"
+                                style="font-size: 0.7875rem; color: #64748b"
+                              >
+                                تاريخ الانتهاء
+                              </th>
+                              <th
+                                class="py-3"
+                                style="font-size: 0.7875rem; color: #64748b"
+                              >
+                                الحالة
+                              </th>
+                              <th
+                                class="py-3"
+                                style="font-size: 0.7875rem; color: #64748b"
+                              >
+                                الإجراءات
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody id="valid">
+                            <!-- <tr>
+                              <th
+                                class="py-3"
+                                style="font-size: 0.9rem; font-weight: 700"
+                              >
+                                <i
+                                  class="fa-solid fa-id-card"
+                                  style="
+                                    border: 1px solid #e5e7eb;
+                                    color: #1e40af;
+                                    background-color: #78a3d9cb;
+                                    border-radius: 0.375rem;
+                                    padding: 0.375rem;
+                                    font-size: 0.625rem;
+                                  "
+                                ></i>
+                                بطاقة الرقم القومي
+                              </th>
+                              <td
+                                class="py-3"
+                                style="font-size: 0.7875rem; color: #64748b"
+                              >
+                                مصلحة الأحوال المدنية
+                              </td>
+                              <td
+                                class="py-3"
+                                style="font-size: 0.75rem; font-weight: 700"
+                              >
+                                24/10/2028
+                              </td>
+                              <td
+                                class="py-3"
+                                style="font-size: 0.675rem; font-weight: bold"
+                              >
+                                <span
+                                  style="
+                                    color: #10b981;
+                                    border: 1px solid #10b981;
+                                    background-color: #2ef7a6d7;
+                                    padding: 2px 6px;
+                                    border-radius: 6px;
+                                  "
+                                >
+                                  سارية
+                                </span>
+                              </td>
+                              <td class="py-3">
+                                <div class="d-flex">
+                                  <span
+                                    style="color: #99a1af; font-size: 14.4px"
+                                    ><i class="fa-regular fa-eye"></i
+                                  ></span>
+                                  <span
+                                    class="pe-3"
+                                    style="color: #99a1af; font-size: 14.4px"
+                                    ><i class="fa-solid fa-pen"></i
+                                  ></span>
+                                </div>
+                              </td>
+                            </tr> -->
+                          </tbody>
+                          <tfoot class="table-light">
+                            <tr>
+                              <td colspan="5">
+                                <div
+                                  class="d-flex justify-content-end align-items-center px-2"
+                                >
+                                  <p
+                                    id="validFoter"
+                                    class="mb-0"
+                                    style="
+                                      font-size: 0.7875rem;
+                                      font-weight: 500;
+                                      color: #64748b;
+                                    "
+                                  >
+                                    <!-- عرض 4 من أصل 12 وثيقة -->
+                                  </p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tfoot>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- قربت -->
+                  <div
+                    class="tab-pane fade"
+                    id="pills-saryia"
+                    role="tabpanel"
+                    aria-labelledby="pills-contact-tab"
+                    tabindex="0"
+                  >
+                    <div class="col-lg-12 tables">
+                      <div class="rounded shadow border overflow-auto">
+                        <table class="table">
+                          <thead class="table-light">
+                            <tr>
+                              <th
+                                class="py-3"
+                                style="font-size: 0.7875rem; color: #64748b"
+                              >
+                                الوثيقة
+                              </th>
+                              <th
+                                class="py-3"
+                                style="font-size: 0.7875rem; color: #64748b"
+                              >
+                                الجهة المصدرة
+                              </th>
+                              <th
+                                class="py-3"
+                                style="font-size: 0.7875rem; color: #64748b"
+                              >
+                                تاريخ الانتهاء
+                              </th>
+                              <th
+                                class="py-3"
+                                style="font-size: 0.7875rem; color: #64748b"
+                              >
+                                الحالة
+                              </th>
+                              <th
+                                class="py-3"
+                                style="font-size: 0.7875rem; color: #64748b"
+                              >
+                                الإجراءات
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody id="about_to_expire">
+                            <!-- <tr>
+                              <th
+                                class="py-3"
+                                style="font-size: 0.9rem; font-weight: 700"
+                              >
+                                <i
+                                  class="fa-solid fa-car-side"
+                                  style="
+                                    border: 1px solid #f2d7a8;
+                                    border-radius: 0.375rem;
+                                    padding: 0.375rem;
+                                    font-size: 0.5rem;
+                                    color: #f59e0b;
+                                    background-color: #f2d7a8;
+                                  "
+                                ></i>
+                                رخصة القيادة
+                              </th>
+                              <td
+                                class="py-3"
+                                style="font-size: 0.7875rem; color: #64748b"
+                              >
+                                وزارة الداخلية - مرور المعادي
+                              </td>
+                              <td
+                                class="py-3"
+                                style="font-size: 0.75rem; font-weight: 700"
+                              >
+                                15/03/2024
+                              </td>
+                              <td
+                                class="py-3"
+                                style="font-size: 0.675rem; font-weight: bold"
+                              >
+                                <span
+                                  style="
+                                    color: #f59e0b;
+                                    border: 1px solid #f5c97e;
+                                    background-color: #f2d7a8;
+                                    padding: 2px 6px;
+                                    border-radius: 6px;
+                                  "
+                                >
+                                  قربت تنتهي
+                                </span>
+                              </td>
+                              <td class="py-3">
+                                <div class="d-flex">
+                                  <span
+                                    style="color: #99a1af; font-size: 14.4px"
+                                    ><i class="fa-regular fa-eye"></i
+                                  ></span>
+                                  <span
+                                    class="pe-3"
+                                    style="color: #99a1af; font-size: 14.4px"
+                                    ><i class="fa-solid fa-pen"></i
+                                  ></span>
+                                </div>
+                              </td>
+                            </tr> -->
+                          </tbody>
+                          <tfoot class="table-light">
+                            <tr>
+                              <td colspan="5">
+                                <div
+                                  class="d-flex justify-content-end align-items-center px-2"
+                                >
+                                  <p
+                                    id="about_to_expireFoter"
+                                    class="mb-0"
+                                    style="
+                                      font-size: 0.7875rem;
+                                      font-weight: 500;
+                                      color: #64748b;
+                                    "
+                                  >
+                                    <!-- عرض 4 من أصل 12 وثيقة -->
+                                  </p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tfoot>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- منتهي -->
+                  <div
+                    class="tab-pane fade"
+                    id="pills-end"
+                    role="tabpanel"
+                    aria-labelledby="pills-contact-tab"
+                    tabindex="0"
+                  >
+                    <div class="col-lg-12 tables">
+                      <div class="rounded shadow border overflow-auto">
+                        <table class="table">
+                          <thead class="table-light">
+                            <tr>
+                              <th
+                                class="py-3"
+                                style="font-size: 0.7875rem; color: #64748b"
+                              >
+                                الوثيقة
+                              </th>
+                              <th
+                                class="py-3"
+                                style="font-size: 0.7875rem; color: #64748b"
+                              >
+                                الجهة المصدرة
+                              </th>
+                              <th
+                                class="py-3"
+                                style="font-size: 0.7875rem; color: #64748b"
+                              >
+                                تاريخ الانتهاء
+                              </th>
+                              <th
+                                class="py-3"
+                                style="font-size: 0.7875rem; color: #64748b"
+                              >
+                                الحالة
+                              </th>
+                              <th
+                                class="py-3"
+                                style="font-size: 0.7875rem; color: #64748b"
+                              >
+                                الإجراءات
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody id="expired">
+                            <!-- <tr>
+                              <th
+                                class="py-3"
+                                style="font-size: 0.9rem; font-weight: 700"
+                              >
+                                <i
+                                  class="fa-solid fa-suitcase"
+                                  style="
+                                    border: 1px solid #e5e7eb;
+                                    border-radius: 0.375rem;
+                                    padding: 0.375rem;
+                                    font-size: 0.625rem;
+                                    color: #ef4444;
+                                    background-color: #faafaf;
+                                  "
+                                ></i>
+                                كارنيه نقابة المهندسين
+                              </th>
+                              <td
+                                class="py-3"
+                                style="font-size: 0.7875rem; color: #64748b"
+                              >
+                                نقابة المهندسين المصرية
+                              </td>
+                              <td
+                                class="py-3"
+                                style="
+                                  font-size: 0.75rem;
+                                  font-weight: 700;
+                                  color: #ef4444;
+                                "
+                              >
+                                31/12/2023
+                              </td>
+                              <td
+                                class="py-3"
+                                style="font-size: 0.675rem; font-weight: bold"
+                              >
+                                <span
+                                  style="
+                                    color: #ef4444;
+                                    border: 1px solid #faafaf;
+                                    background-color: #faafaf;
+                                    padding: 2px 6px;
+                                    border-radius: 6px;
+                                  "
+                                >
+                                  منتهية
+                                </span>
+                              </td>
+                              <td class="py-3">
+                                <div class="d-flex">
+                                  <span
+                                    style="color: #99a1af; font-size: 14.4px"
+                                    ><i class="fa-regular fa-eye"></i
+                                  ></span>
+                                  <span
+                                    class="pe-3"
+                                    style="color: #99a1af; font-size: 14.4px"
+                                    ><i class="fa-solid fa-pen"></i
+                                  ></span>
+                                </div>
+                              </td>
+                            </tr> -->
+                          </tbody>
+                          <tfoot class="table-light">
+                            <tr>
+                              <td colspan="5">
+                                <div
+                                  class="d-flex justify-content-end align-items-center px-2"
+                                >
+                                  <p
+                                    id="expiredFooter"
+                                    class="mb-0"
+                                    style="
+                                      font-size: 0.7875rem;
+                                      font-weight: 500;
+                                      color: #64748b;
+                                    "
+                                  >
+                                    <!-- عرض 4 من أصل 12 وثيقة -->
+                                  </p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tfoot>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- <==========endNav&tab==========> -->
+
+                <!-- <==========button==========> -->
+                <div
+                  class="col-12 d-flex justify-content-end"
+                  id="adddocNewDoc"
+                >
+                  <a
+                    href="./addNewDos.html"
+                    class="btn-add text-decoration-none px-4 py-2 rounded-3"
+                  >
+                    <i class="fa-solid fa-plus pe-1"></i> إضافة وثيقة جديدة
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- loader -->
+    <div
+      id="loooder"
+      class="lood d-flex align-items-center justify-content-center d-none"
+    >
+      <!-- From Uiverse.io by mobinkakei -->
+      <div id="wifi-loader">
+        <svg class="circle-outer" viewBox="0 0 86 86">
+          <circle class="back" cx="43" cy="43" r="40"></circle>
+          <circle class="front" cx="43" cy="43" r="40"></circle>
+          <circle class="new" cx="43" cy="43" r="40"></circle>
+        </svg>
+        <svg class="circle-middle" viewBox="0 0 60 60">
+          <circle class="back" cx="30" cy="30" r="27"></circle>
+          <circle class="front" cx="30" cy="30" r="27"></circle>
+        </svg>
+        <svg class="circle-inner" viewBox="0 0 34 34">
+          <circle class="back" cx="17" cy="17" r="14"></circle>
+          <circle class="front" cx="17" cy="17" r="14"></circle>
+        </svg>
+        <div class="text fs-4 fw-bold" data-text="...Loading"></div>
+      </div>
+    </div>
+    <!-- end footer -->
+    <div
+      class="foot py-4 border-top border-1 border-secondary-subtle text-center text-secondary bg-secondary-subtle"
+    >
+      <h5 class="">جميع الحقوق محفوظة لمنصة وثق © 2026</h5>
+      <p class="h6">
+        باستخدامك لمنصة وَثِّق، فإنك توافق على الشروط والأحكام الخاصة باستخدام
+        خدمات إدارة وتجديد الوثائق الرسمية.
+      </p>
+    </div>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- mainJs -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/add.js"></script>
+    <script src="js/mmode.js"></script>
+  </body>
+</html>
