@@ -25,6 +25,10 @@
 
     <link rel="stylesheet" href="css/mainStyle.css" />
     <link rel="stylesheet" href="css/mmode.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+    />
   </head>
   <body>
     <!-- navbar -->
@@ -215,58 +219,58 @@
               </div>
             </div>
           </div>
-          <form class="py-5">
+          <form id="contactForm" class="py-5">
             <div class="row g-3">
               <div class="col col-12 col-lg-6">
                 <input
                   type="text"
                   class="form-control"
                   placeholder="الاسم"
-                  aria-label=" name"
-                  name="name"
+                  name="user_name"
                   required
                 />
               </div>
+
               <div class="col col-12 col-lg-6">
                 <input
-                  type="Email"
+                  type="email"
                   class="form-control"
                   placeholder="البريد الإلكتروني"
-                  aria-label="Email"
-                  name="email"
+                  name="user_email"
                   required
                 />
               </div>
+
               <div class="col col-12 col-lg-6">
                 <input
-                  type="Phone"
+                  type="text"
                   class="form-control"
                   placeholder="رقم الهاتف"
-                  aria-label="Phone"
-                  name="Phone"
+                  name="user_phone"
                   required
                 />
               </div>
+
               <div class="col col-12 col-lg-6">
                 <input
-                  type="Address"
+                  type="text"
                   class="form-control"
                   placeholder="العنوان"
-                  aria-label="Address"
-                  name="Address"
+                  name="user_address"
                 />
               </div>
             </div>
+
             <div class="my-3">
               <textarea
                 class="form-control"
-                name="Message"
+                name="message"
                 placeholder="ملاحظاتك..."
-                id="textera"
                 style="height: 150px"
                 required
               ></textarea>
             </div>
+
             <button type="submit" class="btn1 px-5 py-2 rounded-3">
               ارسال
             </button>
@@ -311,5 +315,12 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <!-- mainJs -->
     <script src="js/mmode.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
+    <script defer src="js/contactUs.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
   </body>
 </html>
