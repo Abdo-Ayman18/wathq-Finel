@@ -1,5 +1,5 @@
 (function () {
-  emailjs.init("M-7VPKoCcwt9D0-OD");
+  emailjs.init("z1Af9t04kIYjUY9xc"); //Public Key
 })();
 
 const form = document.getElementById("contactForm");
@@ -22,7 +22,7 @@ form.addEventListener("submit", function (e) {
   btn.innerText = "جاري الإرسال...";
 
   emailjs
-    .sendForm("service_bzgvmgc", "template_ihksfnn", this)
+    .sendForm("service_eh4lcrd", "template_s6kxcrr", this)
     .then(function () {
       loader.classList.add("d-none");
 

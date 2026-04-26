@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ar" dir="rtl" >
+<html lang="ar" dir="rtl">
   <head>
     <!-- <script src="./js/gardApp.js"></script> -->
     <meta charset="UTF-8" />
@@ -24,7 +24,10 @@
       content="جدّد وثائقك الرسمية وتراخيص العمل بسهولة وأمان أونلاين بدون طوابير."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://wathq-eng-abdo-ayman.vercel.app/" />
+    <meta
+      property="og:url"
+      content="https://wathq-eng-abdo-ayman.vercel.app/"
+    />
     <meta property="og:image" content="images/logo/main-Logo-Live.png" />
     <title>وَثِّق / الصفحه الرئيسيه</title>
     <link
@@ -43,7 +46,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <!-- fontawesome -->
     <link rel="stylesheet" href="css/all.min.css" />
-    <!-- mainStyle -->
+    <!-- animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/mainStyle.css" />
     <link rel="stylesheet" href="css/mmode.css" />
   </head>
@@ -267,19 +271,31 @@
           </div>
           <!-- counter -->
           <div class="row my-2">
-            <div class="col col-12 col-md-6 col-lg-3 text-center my-3">
+            <div
+              class="col col-12 col-md-6 col-lg-3 text-center my-3"
+              data-aos="zoom-in-left"
+            >
               <h4 class="fw-bold fs-3">50K</h4>
               <p>مستخدم نشط</p>
             </div>
-            <div class="col col-12 col-md-6 col-lg-3 text-center my-3">
+            <div
+              class="col col-12 col-md-6 col-lg-3 text-center my-3"
+              data-aos="zoom-in-up"
+            >
               <h4 class="fw-bold fs-3">120K+</h4>
               <p>وثيقه محميه</p>
             </div>
-            <div class="col col-12 col-md-6 col-lg-3 text-center my-3">
+            <div
+              class="col col-12 col-md-6 col-lg-3 text-center my-3"
+              data-aos="zoom-in-up"
+            >
               <h4 class="fw-bold fs-3">99.9%</h4>
               <p>دقة التنبيهات</p>
             </div>
-            <div class="col col-12 col-md-6 col-lg-3 text-center my-3">
+            <div
+              class="col col-12 col-md-6 col-lg-3 text-center my-3"
+              data-aos="zoom-in-right"
+            >
               <h4 class="fw-bold fs-3">24/7</h4>
               <p>دعم فني</p>
             </div>
@@ -295,7 +311,7 @@
             <div class="card-workHome my-5">
               <div class="row">
                 <!-- card1 -->
-                <div class="col col-12 col-lg-4">
+                <div class="col col-12 col-lg-4" data-aos="flip-right">
                   <div class="card1 text-center h-100 rounded-5 p-4 shadow">
                     <div class="m-4">
                       <span
@@ -312,7 +328,10 @@
                   </div>
                 </div>
                 <!-- card2 -->
-                <div class="col col-12 col-lg-4 my-4 my-lg-0">
+                <div
+                  class="col col-12 col-lg-4 my-4 my-lg-0"
+                  data-aos="flip-down"
+                >
                   <div class="card2 text-center h-100 rounded-5 p-4 shadow">
                     <div class="m-4">
                       <span
@@ -327,7 +346,7 @@
                   </div>
                 </div>
                 <!-- card3 -->
-                <div class="col col-12 col-lg-4">
+                <div class="col col-12 col-lg-4" data-aos="flip-left">
                   <div class="card3 text-center h-100 rounded-5 p-4 shadow">
                     <div class="m-4">
                       <span
@@ -360,7 +379,7 @@
                 <h3 class="fs-1 fw-bold w-">
                   لماذا يعتمد آلاف المصريين على منصة وثق؟
                 </h3>
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center" data-aos="fade-up-right">
                   <i class="fa-solid fa-shield-halved ms-4 fs-4"></i>
                   <div class="w-75">
                     <h4 class="my-3">حماية كاملة لبياناتك</h4>
@@ -370,7 +389,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center" data-aos="fade-up-right">
                   <i class="fa-solid fa-bolt ms-4 fs-4"></i>
                   <div class="w-75">
                     <h4 class="my-3">واجهة سهلة وسريعة</h4>
@@ -380,7 +399,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center" data-aos="fade-up-right">
                   <i class="fa-solid fa-chart-bar ms-4 fs-4"></i>
                   <div class="w-75">
                     <h4 class="my-3">دقة وموثوقية عالية</h4>
@@ -687,6 +706,11 @@
 
     <!-- bootstrap -->
     <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- animation -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <!-- mainJs -->
     <script src="js/index.js"></script>
     <script src="js/mmode.js"></script>
