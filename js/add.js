@@ -204,7 +204,7 @@ async function getData() {
     let data = dat.data.documents;
 
     allDocs = data;
-    console.log(allDocs);
+    // console.log(allDocs);
     // allData
     let cartonaAll = ``;
     for (let i = 0; i < data.length; i++) {
