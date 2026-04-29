@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <!-- fontawesome -->
     <link rel="stylesheet" href="css/all.min.css" />
+    <!-- animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <!-- mainStyle -->
 
     <link rel="stylesheet" href="css/renewal-guide-des.css" />
@@ -188,9 +190,9 @@
             </p>
           </div>
 
-          <div class="row g-4">
+          <div class="row g-4 overflow-hidden">
             <!-- card1  جواز السفر المصرى-->
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="fade-up-right">
               <div class="service-card contact-caption">
                 <div class="icon blue text-end">
                   <i class="fa-solid fa-plane"></i>
@@ -228,7 +230,7 @@
               </div>
             </div>
             <!-- card2  بطاقة الرقم القومى -->
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="fade-up-right">
               <div class="service-card contact-caption">
                 <div class="icon yellow" style="text-align: right">
                   <i class="fa-solid fa-id-card"></i>
@@ -265,7 +267,7 @@
               </div>
             </div>
             <!-- card3  رخصة القيادة-->
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="fade-up-right">
               <div class="service-card contact-caption">
                 <div class="icon green">
                   <i class="fa-solid fa-truck"></i>
@@ -303,7 +305,7 @@
             <!-- map-section -->
             <div class="map-section mt-5">
               <div class="service-card p-4">
-                <div class="row align-items-center g-4">
+                <div class="row align-items-center g-4 overflow-hidden">
                   <!-- tiltle map -->
                   <div class="col-md-6 text-end">
                     <h5 class="fw-bold mb-3" style="color: #1e3a8a">
@@ -316,9 +318,9 @@
                     </p>
 
                     <!-- الكروت -->
-                    <div class="row g-3 mb-4">
+                    <div class="row g-3 mb-4 overflow-hidden">
                       <!-- مصلحة الجوازات - المنصوره -->
-                      <div class="col col-12 col-lg-6">
+                      <div class="col col-12 col-lg-6" data-aos="fade-up-right">
                         <div
                           class="p-3 text-end contact-caption"
                           style="
@@ -340,7 +342,7 @@
                         </div>
                       </div>
                       <!--  السجل المدنى - طلخا -->
-                      <div class="col col-12 col-lg-6">
+                      <div class="col col-12 col-lg-6" data-aos="fade-up-right">
                         <div
                           class="p-3 text-end contact-caption"
                           style="
@@ -366,6 +368,7 @@
                       target="_blank"
                       class="btn btn-primary btn-lg px-5 py-2 text-decoration-none btn1"
                       style="font-size: 15px"
+                      data-aos="fade-up-right"
                     >
                       <i
                         class="fa-solid fa-location-dot"
@@ -376,7 +379,7 @@
                   </div>
 
                   <!--الخريطة -->
-                  <div class="col col-12 col-md-6">
+                  <div class="col col-12 col-md-6" data-aos="fade-up-right">
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d41619.32840202931!2d31.386209454192855!3d31.046004556332733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z2LPYrNmEINmG2K_ZhtmKINin2YTZhdmG2LXZiNix2Yc!5e1!3m2!1sen!2seg!4v1773424118669!5m2!1sen!2seg"
                       width="100%"
@@ -430,6 +433,11 @@
 
     <!-- bootstrap -->
     <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- animation -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <!-- mainJs -->
     <script src="js/renewal.js"></script>
     <script src="js/mmode.js"></script>

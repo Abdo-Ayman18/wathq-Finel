@@ -24,6 +24,8 @@
     <!-- mainStyle -->
 
     <link rel="stylesheet" href="css/notifications.css" />
+    <!-- animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="css/mainStyle.css" />
     <link rel="stylesheet" href="css/mmode.css" />
@@ -269,9 +271,9 @@
 
           <!-- Main Cards Section / قسم البطاقات الرئيسية -->
           <div class="py-5">
-            <div class="row g-4" dir="rtl">
+            <div class="row g-4 overflow-hidden" dir="rtl">
               <!-- Notifications Timeline Card / بطاقة الجدول الزمني للإشعارات -->
-              <div class="col-lg-4 col-md-12">
+              <div class="col-lg-4 col-md-12" data-aos="fade-up-right">
                 <div
                   class="custom-card-id p-0 overflow-hidden d-flex flex-column h-100"
                 >
@@ -293,7 +295,7 @@
               </div>
 
               <!-- Passport Renewal Card / بطاقة تجديد جواز السفر -->
-              <div class="col-lg-4 col-md-6">
+              <div class="col-lg-4 col-md-6" data-aos="fade-up-right">
                 <div class="custom-card-id">
                   <div
                     class="d-flex align-items-center justify-content-between mb-4"
@@ -351,7 +353,7 @@
               </div>
 
               <!-- National ID Renewal Card / بطاقة تجديد بطاقة الرقم القومي -->
-              <div class="col-lg-4 col-md-6">
+              <div class="col-lg-4 col-md-6" data-aos="fade-up-right">
                 <div class="custom-card-id">
                   <div
                     class="d-flex align-items-center justify-content-between mb-4"
@@ -413,8 +415,11 @@
           <div class="custom-location-component">
             <!-- Promo Banner Card / بطاقة البانر الدعائي -->
             <div class="promo-banner-card">
-              <div class="row align-items-center">
-                <div class="px-5 col-lg-8 col-md-7 content-side">
+              <div class="row align-items-center overflow-hidden">
+                <div
+                  class="px-5 col-lg-8 col-md-7 content-side"
+                  data-aos="fade-up-right"
+                >
                   <h2 class="banner-title">
                     هل تحتاج لمساعدة في تحديد أقرب سجل مدني؟
                   </h2>
@@ -430,7 +435,10 @@
                     <i class="bi bi-map"></i> فتح الخريطة التفاعلية
                   </a>
                 </div>
-                <div class="col-lg-4 col-md-5 Passport-an-id img-side">
+                <div
+                  class="col-lg-4 col-md-5 Passport-an-id img-side"
+                  data-aos="fade-up-right"
+                >
                   <img
                     src="images/Passport and ID.png"
                     alt="Passport and ID"
@@ -460,8 +468,8 @@
               </div>
 
               <!-- Branch List / قائمة الفروع -->
-              <div class="row branches-info-row mt-4">
-                <div class="col-md-9 mb-3">
+              <div class="row branches-info-row mt-4 overflow-hidden">
+                <div class="col-md-9 mb-3" data-aos="fade-up-right">
                   <div class="branch-item">
                     <div class="icon-send"><i class="bi bi-send-fill"></i></div>
                     <div class="branch-text">
@@ -472,7 +480,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3 mb-3">
+                <div class="col-md-3 mb-3" data-aos="fade-up-right">
                   <div class="branch-item">
                     <div class="icon-send"><i class="bi bi-send-fill"></i></div>
                     <div class="branch-text">
@@ -526,10 +534,14 @@
 
     <!-- bootstrap -->
     <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- animation -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <!-- mainJs -->
     <script src="js/notifications.js"></script>
     <script src="js/mas.js"></script>
     <script src="js/mmode.js"></script>
-    s
   </body>
 </html>
