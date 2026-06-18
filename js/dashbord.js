@@ -258,7 +258,7 @@ function changeRogres(data) {
 async function getDataMe() {
   loooder.classList.remove("d-none"); //اظهار looder
   const api = await fetch(
-    `https://graduation-backend-production-b53d.up.railway.app/api/v1/users/me`,
+    `https://graduation-backend-production-d4bd.up.railway.app/api/v1/users/me`,
     {
       method: "GEt",
       headers: {
@@ -379,7 +379,7 @@ async function getNotifications() {
   try {
     // طلب API لجلب الإشعارات غير المقروءة
     const res = await fetch(
-      "https://graduation-backend-production-b53d.up.railway.app/api/v1/notifications",
+      "https://graduation-backend-production-d4bd.up.railway.app/api/v1/notifications",
       {
         method: "GET",
 
@@ -464,7 +464,7 @@ async function markAsRead(id) {
   try {
     // إرسال طلب للسيرفر لتغيير حالة الإشعار إلى "مقروء"
     await fetch(
-      `https://graduation-backend-production-b53d.up.railway.app/api/v1/notifications/${id}/read`,
+      `https://graduation-backend-production-d4bd.up.railway.app/api/v1/notifications/${id}/read`,
       {
         method: "PATCH",
 
