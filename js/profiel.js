@@ -21,7 +21,7 @@ window.scrollTo({
 async function getDataMe() {
   loooder.classList.remove("d-none"); //اظهار looder
   const api = await fetch(
-    `https://graduation-backend-production-b53d.up.railway.app/api/v1/users/me`,
+    `https://graduation-backend-production-d4bd.up.railway.app/api/v1/users/me`,
     {
       method: "GEt",
       headers: {

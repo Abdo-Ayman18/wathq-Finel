@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   async function getNotifications() {
     try {
       const res = await fetch(
-        "https://graduation-backend-production-b53d.up.railway.app/api/v1/notifications",
+        "https://graduation-backend-production-d4bd.up.railway.app/api/v1/notifications",
         {
           headers: { Authorization: `Bearer ${tokenUser}` },
         },
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
   async function markAsRead(id) {
     try {
       await fetch(
-        `https://graduation-backend-production-b53d.up.railway.app/api/v1/notifications/${id}/read`,
+        `https://graduation-backend-production-d4bd.up.railway.app/api/v1/notifications/${id}/read`,
         {
           method: "PATCH",
           headers: { Authorization: `Bearer ${tokenUser}` },

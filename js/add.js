@@ -739,7 +739,7 @@ async function markAsRead(id) {
   try {
     // إرسال طلب لتغيير حالة الإشعار إلى مقروء
     await fetch(
-      `https://graduation-backend-production-b53d.up.railway.app/api/v1/notifications/${id}/read`,
+      `https://graduation-backend-production-d4bd.up.railway.app/api/v1/notifications/${id}/read`,
       {
         method: "PATCH",
         headers: {
