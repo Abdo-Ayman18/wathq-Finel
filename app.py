@@ -1,4 +1,3 @@
-# 2. انسخ هذا الكود بالكامل وضعه في ملف app.py (واحفظ الملف):
 import os
 from flask import Flask, request, jsonify
 from flask_cors import CORS
@@ -9,7 +8,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app)
+# السماح بجميع الدومينات لضمان عمل الـ API مع موقعك أو تطبيقك
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 client = genai.Client(api_key=os.environ.get("SERVICE_KEY"))
 
@@ -91,5 +91,6 @@ def chat():
 def health():
     return jsonify({"status": "ok"})
 
+# لتشغيل السيرفر محلياً للتجربة فقط، فيرسل سيتجاهل هذا الجزء
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
