@@ -3,12 +3,12 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from google import genai
 from google.genai import types
+from google.genai.errors import APIError # استدعاء مكتبة الأخطاء الخاصة بجوجل
 from dotenv import load_dotenv
 
 load_dotenv()
 
 app = Flask(__name__)
-# السماح بجميع الدومينات لضمان عمل الـ API مع موقعك أو تطبيقك
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 client = genai.Client(api_key=os.environ.get("SERVICE_KEY"))
@@ -84,13 +84,19 @@ def chat():
 
         return jsonify({"reply": response.text})
 
+    except APIError as ae:
+        # إذا كانت المشكلة بسبب كوتا جوجل أو الـ API Key، السيرفر مش هيقع وهيرد برقم الخطأ بذكاء
+        if ae.code == 429:
+            return jsonify({"error": "⚠️ انتهت الكوتا المجانية اليومية لمفتاح Gemini الحالي. يرجى تحديث الـ SERVICE_KEY في إعدادات فيرسل."}), 429
+        return jsonify({"error": f"جوجل API خطأ: {ae.message}"}), ae.code
+
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        # لأي خطأ عام آخر في الكود
+        return jsonify({"error": f"خطأ داخلي في السيرفر: {str(e)}"}), 500
 
 @app.route("/health")
 def health():
     return jsonify({"status": "ok"})
 
-# لتشغيل السيرفر محلياً للتجربة فقط، فيرسل سيتجاهل هذا الجزء
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
