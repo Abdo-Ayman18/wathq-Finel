@@ -2,11 +2,11 @@
   "rewrites": [
     {
       "source": "/chat",
-      "destination": "/app.py"
+      "destination": "/api/index.py"
     },
     {
       "source": "/health",
-      "destination": "/app.py"
+      "destination": "/api/index.py"
     }
   ]
 }
