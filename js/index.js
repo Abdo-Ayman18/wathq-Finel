@@ -20,15 +20,18 @@ window.scrollTo({
 if (localStorage.getItem("tokenUser") != null) {
   document.getElementById("loginNave").classList.add("d-none"); //اخفاء زر تسجيل الدخول ف الناف
   document.getElementById("sideNave").classList.remove("d-none"); //اظهار السيد بار ف حاله تسجيل الدخول
+  document.getElementById("nodefcation-home").classList.remove("d-none"); //اظهار  جرس الاشعارات ف حاله تسجيل الدخول
   document.querySelector(".startNowHome").classList.add("d-none"); // اخفاء زر ابدا الان عند تسجيل الدخول
   document.querySelector(".startNowHomeBox").classList.add("d-none"); // اخفاء زر ابدا الان عند تسجيل الدخول
-  document.querySelector(".booooooooooooooot").classList.remove("d-none"); // اخفاء زر ابدا الان عند تسجيل الدخول
+  document.querySelector(".booooooooooooooot").classList.remove("d-none"); //  اظهار شات بوت
 } else {
   document.getElementById("loginNave").classList.remove("d-none"); //اظهار زر تسجيل الدخول ف الناف
   document.getElementById("sideNave").classList.add("d-none"); //اخفاء السيد بار ف حاله تسجيل الدخول
+  document.getElementById("nodefcation-home").classList.add("d-none"); //اخفاء  جرس الاشعارات ف حاله تسجيل الدخول
+
   document.querySelector(".startNowHome").classList.remove("d-none"); // اظهار زر ابدا الان عند تسجيل الدخول
   document.querySelector(".startNowHomeBox").classList.remove("d-none"); // اظهار زر ابدا الان عند تسجيل الدخول
-  document.querySelector(".booooooooooooooot").classList.add("d-none"); // اظهار زر ابدا الان عند تسجيل الدخول
+  document.querySelector(".booooooooooooooot").classList.add("d-none"); //       اخفاء شات بوت
 }
 //!=====>  function   <====
 
