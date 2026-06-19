@@ -442,9 +442,24 @@ footer .contactUs-footer:hover {
   align-items: center;
   justify-content: center;
   position: fixed;
-  bottom: 50px;
-  right: 30px;
+  bottom: 20px;
+  right: 20px;
 }
-.boot-1 a {
+.boot-1 span {
   font-size: 30px;
+  cursor: pointer;
+}
+#boobab-Chat {
+  position: fixed;
+  bottom: 75px;
+  right: 0px;
+  /* width: 40%;
+  height: 75%; */
+  border-radius: 4%;
+}
+#closs-boot {
+  cursor: pointer;
+}
+.hidden {
+  display: none;
 }
