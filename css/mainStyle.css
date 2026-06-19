@@ -221,7 +221,17 @@ footer .contactUs-footer:hover {
   transform: translate(10px, 10px);
   cursor: pointer;
 }
-
+footer .foter-iecone span {
+  display: inline-block;
+  font-size: 30px;
+  margin: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+footer .foter-iecone span:hover {
+  transform: scale(1.2);
+  color: #0a6cce;
+}
 #logOut {
   cursor: pointer;
 }
@@ -432,6 +442,8 @@ footer .contactUs-footer:hover {
 }
 
 /* end loader */
+
+/* chattboot */
 
 .boot-1 {
   width: 50px;

@@ -355,6 +355,34 @@
           ></i>
           وَثِّق
         </a>
+        <!-- ====== زرار الجرس ====== -->
+        <div class="dropdown">
+          <!-- زرار فتح الإشعارات -->
+          <button
+            class="btn position-relative"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <!-- أيقونة الجرس -->
+            <i class="fa-solid fa-bell fs-5"></i>
+
+            <!-- عدد الإشعارات (Badge فوق الجرس) -->
+            <span
+              id="notiCount"
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+            >
+              0
+            </span>
+          </button>
+
+          <!-- قائمة الإشعارات اللي هتظهر -->
+          <ul
+            id="notiList"
+            class="dropdown-menu dropdown-menu-end shadow"
+            style="width: 500px; min-height: 100%; overflow-y: auto"
+          ></ul>
+        </div>
 
         <div class="">
           <button

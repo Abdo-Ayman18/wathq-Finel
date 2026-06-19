@@ -376,6 +376,36 @@
           ></i>
           وَثِّق
         </a>
+
+        <!-- ====== زرار الجرس ====== -->
+        <div class="dropdown">
+          <!-- زرار فتح الإشعارات -->
+          <button
+            class="btn position-relative"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <!-- أيقونة الجرس -->
+            <i class="fa-solid fa-bell fs-5"></i>
+
+            <!-- عدد الإشعارات (Badge فوق الجرس) -->
+            <span
+              id="notiCount"
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+            >
+              0
+            </span>
+          </button>
+
+          <!-- قائمة الإشعارات اللي هتظهر -->
+          <ul
+            id="notiList"
+            class="dropdown-menu dropdown-menu-end shadow"
+            style="width: 500px; min-height: 100%; overflow-y: auto"
+          ></ul>
+        </div>
+
         <div class="">
           <a
             href="./register.html"
@@ -1073,6 +1103,12 @@
                   نظامك الذكي للتذكير بتجديد الوثائق الرسمية، مصمم خصيصاً لتوفير
                   وقتك وجهدك وضمان التزامك بالمواعيد القانونية.
                 </p>
+                <div class="foter-iecone">
+                  <span><i class="fa-brands fa-facebook"></i></span>
+                  <span><i class="fa-brands fa-linkedin-in"></i></span>
+                  <span><i class="fa-brands fa-twitter"></i></span>
+                  <span><i class="fa-brands fa-instagram"></i></span>
+                </div>
               </div>
               <div class="col col-12 col-lg-3">
                 <h4>روابط سريعة</h4>
@@ -1154,6 +1190,7 @@
       </p>
     </div>
 
+    <script src="js/notifications.js"></script>
     <!-- bootstrap -->
     <script src="js/bootstrap.bundle.min.js"></script>
     <!-- animation -->
