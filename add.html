@@ -1186,7 +1186,7 @@
         bub.className =
           "bubble " + (isError ? "error" : role === "user" ? "user" : "bot");
 
-        bub.textContent = text;
+        bub.innerHTML = text.replace(/\\n/g, "<br>");
 
         wrap.appendChild(av);
         wrap.appendChild(bub);
