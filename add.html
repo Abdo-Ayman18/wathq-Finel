@@ -1144,10 +1144,12 @@
       };
     </script>
     <script>
-      // ✅ عنوان الباك إند — غيّره لرابط السيرفر لو رفعتوه أونلاين
-      // const BACKEND_URL = "http://localhost:5000/chat";
-      // ✅ عنوان الباك إند — غيّره لرابط السيرفر لو رفعتوه أونلاين
-      const BACKEND_URL = "https://wathq-eng-abdo-ayman.vercel.app/chat";
+      // السيرفر الأساسي
+      const BACKEND_URL =
+        "https://hook.eu1.make.com/kqos2tf79agek87o7ol1u272eubx3f7r";
+
+      // سيرفر احتياطي
+      const BACKUP_URL = "https://wathq-eng-abdo-ayman.vercel.app/chat";
 
       let history = [];
       let busy = false;
@@ -1163,24 +1165,33 @@
           send();
         }
       }
+
       function scrollDown() {
         msgsEl.scrollTop = msgsEl.scrollHeight;
       }
 
       function addBubble(role, text, isError = false) {
-        if (typingRow.parentNode === msgsEl) msgsEl.removeChild(typingRow);
+        if (typingRow.parentNode === msgsEl) {
+          msgsEl.removeChild(typingRow);
+        }
+
         const wrap = document.createElement("div");
         wrap.className = "msg-wrap" + (role === "user" ? " user" : "");
+
         const av = document.createElement("div");
         av.className = "avatar " + (role === "user" ? "user-av" : "bot-av");
         av.textContent = role === "user" ? "👤" : "🤖";
+
         const bub = document.createElement("div");
         bub.className =
           "bubble " + (isError ? "error" : role === "user" ? "user" : "bot");
+
         bub.textContent = text;
+
         wrap.appendChild(av);
         wrap.appendChild(bub);
         msgsEl.appendChild(wrap);
+
         scrollDown();
       }
 
@@ -1189,40 +1200,82 @@
         typingRow.style.display = "flex";
         scrollDown();
       }
+
       function hideTyping() {
         typingRow.style.display = "none";
-        if (typingRow.parentNode === msgsEl) msgsEl.removeChild(typingRow);
+        if (typingRow.parentNode === msgsEl) {
+          msgsEl.removeChild(typingRow);
+        }
       }
 
       async function send(txt) {
         const text = (txt !== undefined ? txt : inpEl.value).trim();
+
         if (!text || busy) return;
+
         inpEl.value = "";
         inpEl.style.height = "auto";
+
         busy = true;
         sendBtn.disabled = true;
+
         addBubble("user", text);
         history.push({ role: "user", content: text });
+
         showTyping();
+
         try {
-          const res = await fetch(BACKEND_URL, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ messages: history }),
-          });
+          let res;
+
+          try {
+            // المحاولة الأولى: Make.com
+            res = await fetch(BACKEND_URL, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                messages: history,
+              }),
+            });
+          } catch {
+            // لو فشل ينتقل للباك أب
+            res = await fetch(BACKUP_URL, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                messages: history,
+              }),
+            });
+          }
+
           const data = await res.json();
-          if (!res.ok) throw new Error(data.error || "خطأ");
+
+          if (!res.ok) {
+            throw new Error(data.error || "حدث خطأ");
+          }
+
           hideTyping();
-          addBubble("assistant", data.reply);
-          history.push({ role: "assistant", content: data.reply });
+
+          const reply = data.reply || data.response || data.message;
+
+          addBubble("assistant", reply);
+          history.push({
+            role: "assistant",
+            content: reply,
+          });
         } catch (e) {
           hideTyping();
+
           addBubble(
             "assistant",
-            "⚠️ " + (e.message || "خطأ في الاتصال بالسيرفر."),
+            "⚠️ " + (e.message || "خطأ في الاتصال بالسيرفر"),
             true,
           );
         }
+
         busy = false;
         sendBtn.disabled = false;
         inpEl.focus();
