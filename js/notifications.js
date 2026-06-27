@@ -56,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
       li.style.cursor = "pointer";
 
       li.innerHTML = `
-        <div>${n.title}</div>
         <div class="small text-muted">${n.message}</div>
       `;
 
