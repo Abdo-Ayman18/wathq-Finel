@@ -355,7 +355,7 @@ function searcData() {
   
                           <div class="expire">
                             تاريخ الانتهاء
-                            <strong> ${new Date(allDocs[i].expiryDate).toLocaleDateString()}/strong>
+                            <strong> ${new Date(allDocs[i].expiryDate).toLocaleDateString()}</strong>
                           </div>
                         </div>
                       </div>
