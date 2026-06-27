@@ -70,7 +70,7 @@ function setForm() {
 async function loginForm(userData) {
   loooder.classList.remove("d-none"); //اظهار looder
   const api = await fetch(
-    `https://graduation-backend-production-d4bd.up.railway.app/api/v1/auth/login`,
+    `https://graduation-backend-production-88eb.up.railway.app/api/v1/auth/login`,
     {
       method: "POST",
       body: JSON.stringify(userData),

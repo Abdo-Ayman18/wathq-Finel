@@ -189,7 +189,7 @@ function searcData() {
 async function getData() {
   loooder.classList.remove("d-none"); //اظهار looder
   const api = await fetch(
-    `https://graduation-backend-production-d4bd.up.railway.app/api/v1/documents`,
+    `https://graduation-backend-production-88eb.up.railway.app/api/v1/documents`,
     {
       method: "GEt",
       headers: {
@@ -551,7 +551,7 @@ async function getData() {
 //* حذف عنصر
 async function deletItem(id) {
   const api = await fetch(
-    `https://graduation-backend-production-d4bd.up.railway.app/api/v1/documents/${id}`,
+    `https://graduation-backend-production-88eb.up.railway.app/api/v1/documents/${id}`,
     {
       method: "DELETE",
       headers: {
@@ -623,7 +623,7 @@ async function upDate(id) {
 
     // 5) نبعت التعديل للسيرفر
     const res = await fetch(
-      `https://graduation-backend-production-d4bd.up.railway.app/api/v1/documents/${id}`,
+      `https://graduation-backend-production-88eb.up.railway.app/api/v1/documents/${id}`,
       {
         method: "PATCH",
         headers: {
@@ -665,7 +665,7 @@ async function getNotifications() {
   try {
     // طلب جلب الإشعارات من الـ API
     const res = await fetch(
-      `https://graduation-backend-production-d4bd.up.railway.app/api/v1/notifications?t=${Date.now()}`,
+      `https://graduation-backend-production-88eb.up.railway.app/api/v1/notifications?t=${Date.now()}`,
       {
         method: "GET",
         headers: {
@@ -739,7 +739,7 @@ async function markAsRead(id) {
   try {
     // إرسال طلب لتغيير حالة الإشعار إلى مقروء
     await fetch(
-      `https://graduation-backend-production-d4bd.up.railway.app/api/v1/notifications/${id}/read`,
+      `https://graduation-backend-production-88eb.up.railway.app/api/v1/notifications/${id}/read`,
       {
         method: "PATCH",
         headers: {
