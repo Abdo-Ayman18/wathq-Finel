@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const notiList = document.getElementById("notiList");
   const notiCount = document.getElementById("notiCount");
-  const bellBtn = document.querySelectorAll('[data-bs-toggle="dropdown"]');
+  const bellBtn = document.querySelector('[data-bs-toggle="dropdown"]');
   const tokenUser = localStorage.getItem("tokenUser");
 
   // ================== لما المستخدم يفتح الجرس ==================
