@@ -1,26 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head>
-  <script src="./js/gardApp.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <script src="./js/gardApp.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>وَثِّق / اضافه وثيقه</title>
-    <link rel="shortcut icon" href="images/logo/main-logo.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="images/logo/main-logo.png"
+      type="image/x-icon"
+    />
     <!-- font cairo -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
     <!-- bootstrab -->
-     <link rel="stylesheet" href="css/bootstrap.min.css">
-     <!-- fontawesome -->
-     <link rel="stylesheet" href="css/all.min.css">
-     <!-- mainStyle -->
-     <link rel="stylesheet" href="css/addNewDos.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- mainStyle -->
+    <link rel="stylesheet" href="css/addNewDos.css" />
 
-
-     <link rel="stylesheet" href="css/mainStyle.css">
-         <link rel="stylesheet" href="css/mmode.css" />
-         <!-- chatboot -->
+    <link rel="stylesheet" href="css/mainStyle.css" />
+    <link rel="stylesheet" href="css/mmode.css" />
+    <!-- chatboot -->
     <link
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -334,32 +340,58 @@
         flex-shrink: 0;
       }
     </style>
-
-</head>
-<body>
+  </head>
+  <body>
     <!-- navbar -->
-<nav class="navbar  fixed-top  border-bottom border-black shadow-lg">
-  <div class="container">
-    <a class="navbar-brand text-white fs-3 fw-bold" href="#"><i class="fa-solid fa-shield-halved border p-1 rounded bg-white" style="color: #1E40AF;"></i> وَثِّق </a>
-   
-     
-<div class="">
-   <!-- <span class="btn btn-outline-light ms-4" id="signInNav">تسجيل الدخول</span> -->
-      <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon  "></span>
-    </button>
+    <nav class="navbar fixed-top border-bottom border-black shadow-lg">
+      <div class="container">
+        <a class="navbar-brand text-white fs-3 fw-bold" href="#"
+          ><i
+            class="fa-solid fa-shield-halved border p-1 rounded bg-white"
+            style="color: #1e40af"
+          ></i>
+          وَثِّق
+        </a>
 
-</div>
-    
-    <div class="offcanvas offcanvas-start aside-color" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-header text-white">
-        <button type="button " class="btn-close bg-white "  data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        <h4 class="offcanvas-title text-white " id="offcanvasNavbarLabel"><i class="fa-solid fa-shield-halved border p-1 rounded bg-white" style="color: #1E40AF;"></i> وَثِّق</h4>
-      </div>
-      <div class="offcanvas-body d-flex flex-column">
-<hr>
-  <ul class="navbar-nav justify-content-start flex-grow-1 pe-3 ">
-   <li class="nav-item">
+        <div class="">
+          <!-- <span class="btn btn-outline-light ms-4" id="signInNav">تسجيل الدخول</span> -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div
+          class="offcanvas offcanvas-start aside-color"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header text-white">
+            <button
+              type="button "
+              class="btn-close bg-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+            <h4 class="offcanvas-title text-white" id="offcanvasNavbarLabel">
+              <i
+                class="fa-solid fa-shield-halved border p-1 rounded bg-white"
+                style="color: #1e40af"
+              ></i>
+              وَثِّق
+            </h4>
+          </div>
+          <div class="offcanvas-body d-flex flex-column">
+            <hr />
+            <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+              <li class="nav-item">
                 <a
                   class="nav-link active text-white"
                   aria-current="page"
@@ -414,277 +446,318 @@
                   تواصل معنا</a
                 >
               </li>
-  </ul>
-<hr>
-  <ul class="navbar-nav mt-auto">
-    <li class="nav-item dropdown">
-      <a class="nav-link  text-white" href="#" role="button" data-bs-toggle="dropdown">
-       <i class="fa-solid fa-gear fa-spin" style="color:#fff;"></i> إعدادات 
-      </a>
+            </ul>
+            <hr />
+            <ul class="navbar-nav mt-auto">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link text-white"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                >
+                  <i class="fa-solid fa-gear fa-spin" style="color: #fff"></i>
+                  إعدادات
+                </a>
 
-      <ul class="dropdown-menu text-center  bg-dark-subtle ">
-        <li>
-          <span class="dark-iecon">
-            <i class="fa-solid fa-moon fs-4" style="color: #ffc800; "></i>
-          </span>
-        </li>
-    
-            <li><hr class="dropdown-divider"></li>
-           <li>
+                <ul class="dropdown-menu text-center bg-dark-subtle">
+                  <li>
+                    <span class="dark-iecon">
+                      <i
+                        class="fa-solid fa-moon fs-4"
+                        style="color: #ffc800"
+                      ></i>
+                    </span>
+                  </li>
+
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
                     <a class="nav-link text-black" href="./profiel.html">
                       <i class="fa-regular fa-user fs-5"></i>
                     </a>
                   </li>
 
-        <li><hr class="dropdown-divider"></li>
-        <li id="logOut">تسجيل الخروج</li>
-      </ul>
-    </li>
-  </ul>
-</div>
-    </div>
-  </div>
-</nav>
-
-<main class="mt-5 pt-4  ">
-<!-- add new dos  اضافه وثيقه جديده -->
-    <section id="addNewDos"  class="bg-secondary-subtle ">
-      <div class="container justify-content-center align-items-center py-5">
-      <div class="card document-card p-5 shadow-sm shadow-lg">
-        <div class="d-flex justify-content-between align-items-center mb-3">
-          <h2 class="fw-bold mb-0 fs-3">إضافة وثيقة جديدة</h2>
-        
-        </div>
-        <p class="text-muted small mb-4">
-          أدخل بيانات وثيقتك الرسمية بدقة لضمان استلام التنبيهات في موعدها.
-        </p>
-
-        <!-- <form> -->
-          <div class="row g-3">
-            <!-- name dos -->
-           <div class="col-md-5">
-               <label  for="nameDos" class="form-label text-secondary small" >اسم الوثيقة </label>
-               <input type="text" list="nameLi" id="nameDos" placeholder="(مثال: رخصة القيادة)" class=" form-control">
-               <datalist id="nameLi">
-                <option value="بطاقة هوية"></option>
-                <option value="جواز سفر"></option>
-                <option value="رخصة قيادة"></option>
-               </datalist>
-            </div>
-            <!-- location Dos -->
-            <div class="col-md-5">
-              <label for="locationDos" class="form-label text-secondary small"
-                > رقم الوثيقه + الجهه المصدره للوثيقه</label
-              >
-              <input 
-              id="locationDos"
-                type="text"
-                class="form-control"
-                placeholder="مثال: مصلحة الأحوال المدنية - 123345"
-              />
-            </div>
-            <!-- start date-->
-            <div class="col-md-5">
-              <label for="startDate" class="form-label text-secondary small"
-                >تاريخ انشاء الوثيقة</label
-              >
-              <input type="date" id="startDate" class="form-control" />
-            </div>
-            <!-- end date-->
-            <div class="col-md-5">
-              <label for="endDate" class="form-label text-secondary small"
-                >تاريخ انتهاء الوثيقة</label
-              >
-              <input id="endDate" type="date" class="form-control" />
-            </div>
-            <!-- nodfcation -->
-            <div class="col-md-5">
-              <label class="form-label text-secondary small"
-                >وسيلة التنبيه المفضلة</label
-              >
-
-              <div class="d-flex gap-3 mt-1">
-                <div
-                  class="form-check border rounded px-3 py-2 flex-grow-1 d-flex align-items-center gap-2"
-                >
-                  <input
-                    class="form-check-input m-0"
-                    type="checkbox"
-                    id="email"
-                    checked
-                  />
-                  <label
-                    class="form-check-label m-0 cursor-pointer"
-                    for="email"
-                  >
-                    بريد إلكتروني
-                  </label>
-                </div>
-
-
-              </div>
-            </div>
-            <!-- الصوره -->
-            <!-- <div class="col-12 mt-4">
-              <label class="form-label text-secondary small"
-                >صورة الوثيقة (اختياري)</label
-              >
-              
-              <div
-                class="upload-box img-folder border-dashed rounded text-center p-4"
-              >
-                <i class="fas fa-image fa-2x text-primary mb-2"></i>
-                <p class="mb-1 fw-bold">
-                  اسحب صورة الوثيقة هنا أو اضغط للاختيار
-                </p>
-                <span class="text-muted extra-small"
-                  >يدعم ملفات JPG, PNG, PDF (بحد أقصى 5 ميجا)</span
-                >
-              </div>
-            </div> -->
-
-            <div class="col-md-12 mt-3">
-              <div
-                class="alert alert-light border-4 d-flex align-items-center py-2 px-3 m-0 rounded-4"
-              >
-                <i class="fas fa-info-circle text-primary me-2"></i>
-                <small class="text-secondary"
-                  >سيتم إرسال التنبيهات قبل 30 يوماً، 15 يوماً، و 7 أيام من
-                  تاريخ الانتهاء المذكور أعلاه.</small
-                >
-              </div>
-            </div>
-
-            <div class="w-100 d-flex gap-2 mt-4">
-              <button id="submitData" type="button" class="btn btn-primary flex-grow-1 py-2">
-                حفظ الوثيقة الآن
-              </button>
-              <button id="clear" type="button" class="btn btn-outline-secondary px-4">
-                إلغاء
-              </button>
-            </div>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li id="logOut">تسجيل الخروج</li>
+                </ul>
+              </li>
+            </ul>
           </div>
-        <!-- </form> -->
+        </div>
       </div>
-    </div>
-  </section>
+    </nav>
 
+    <main class="mt-5 pt-4">
+      <!-- add new dos  اضافه وثيقه جديده -->
+      <section id="addNewDos" class="bg-secondary-subtle">
+        <div class="container justify-content-center align-items-center py-5">
+          <div class="card document-card p-5 shadow-sm shadow-lg">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h2 class="fw-bold mb-0 fs-3">إضافة وثيقة جديدة</h2>
+            </div>
+            <p class="text-muted small mb-4">
+              أدخل بيانات وثيقتك الرسمية بدقة لضمان استلام التنبيهات في موعدها.
+            </p>
+
+            <!-- <form> -->
+            <div class="row g-3">
+              <!-- name dos -->
+              <div class="col-md-5">
+                <label for="nameDos" class="form-label text-secondary small"
+                  >اسم الوثيقة
+                </label>
+                <input
+                  type="text"
+                  list="nameLi"
+                  id="nameDos"
+                  placeholder="(مثال: رخصة القيادة)"
+                  class="form-control"
+                />
+                <datalist id="nameLi">
+                  <option value="بطاقة هوية"></option>
+                  <option value="جواز سفر"></option>
+                  <option value="رخصة قيادة"></option>
+                </datalist>
+              </div>
+              <!-- location Dos -->
+              <div class="col-md-5">
+                <label
+                  for="locationDos"
+                  class="form-label text-secondary small"
+                >
+                  رقم الوثيقه + الجهه المصدره للوثيقه</label
+                >
+                <input
+                  id="locationDos"
+                  type="text"
+                  class="form-control"
+                  placeholder="مثال: مصلحة الأحوال المدنية - 123345"
+                />
+              </div>
+              <!-- start date-->
+              <div class="col-md-5">
+                <label for="startDate" class="form-label text-secondary small"
+                  >تاريخ انشاء الوثيقة</label
+                >
+                <input type="date" id="startDate" class="form-control" />
+              </div>
+              <!-- end date-->
+              <div class="col-md-5">
+                <label for="endDate" class="form-label text-secondary small"
+                  >تاريخ انتهاء الوثيقة</label
+                >
+                <input id="endDate" type="date" class="form-control" />
+              </div>
+              <!-- nodfcation -->
+              <div class="col-md-5">
+                <label class="form-label text-secondary small"
+                  >وسيلة التنبيه المفضلة</label
+                >
+
+                <div class="d-flex gap-3 mt-1">
+                  <div
+                    class="form-check border rounded px-3 py-2 flex-grow-1 d-flex align-items-center gap-2"
+                  >
+                    <input
+                      class="form-check-input m-0"
+                      type="checkbox"
+                      id="email"
+                      checked
+                    />
+                    <label
+                      class="form-check-label m-0 cursor-pointer"
+                      for="email"
+                    >
+                      بريد إلكتروني
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <!-- OCR — قراءة الوثيقة تلقائياً -->
+              <div class="col-12 mt-2 text-center">
+                <label class="form-label text-secondary small">
+                  📷 قراءة الوثيقة تلقائياً بالذكاء الاصطناعي (اختياري)
+                </label>
+                <div class="border rounded-3 p-3 bg-white shadow-sm">
+                  <p class="text-muted small mb-2">
+                    ارفع صورة وثيقتك وسيقوم الذكاء الاصطناعي بملء الحقول
+                    تلقائياً.
+                  </p>
+                  <div class="d-flex align-items-center gap-3 flex-wrap">
+                    <input
+                      type="file"
+                      id="doc-image-input"
+                      accept="image/*"
+                      class="d-none"
+                      onchange="onDocImageSelected(event)"
+                    />
+                    <button
+                      type="button"
+                      class="btn btn-outline-primary d-flex align-items-center gap-2 mx-auto"
+                      onclick="
+                        document.getElementById('doc-image-input').click()
+                      "
+                    >
+                      <span
+                        class="spinner-border spinner-border-sm d-none"
+                        id="ocr-spinner"
+                      ></span>
+                      <span id="ocr-btn-text">📷 قراءة الوثيقة تلقائياً</span>
+                    </button>
+                    <span id="ocr-filename" class="text-muted small"></span>
+                  </div>
+                  <p class="text-muted small mt-2 mb-0">
+                    يدعم صور JPG و PNG و WebP — بحد أقصى 10 ميجا
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-12 mt-3">
+                <div
+                  class="alert alert-light border-4 d-flex align-items-center py-2 px-3 m-0 rounded-4"
+                >
+                  <i class="fas fa-info-circle text-primary me-2"></i>
+                  <small class="text-secondary"
+                    >سيتم إرسال التنبيهات قبل 30 يوماً، 15 يوماً، و 7 أيام من
+                    تاريخ الانتهاء المذكور أعلاه.</small
+                  >
+                </div>
+              </div>
+
+              <div class="w-100 d-flex gap-2 mt-4">
+                <button
+                  id="submitData"
+                  type="button"
+                  class="btn btn-primary flex-grow-1 py-2"
+                >
+                  حفظ الوثيقة الآن
+                </button>
+                <button
+                  id="clear"
+                  type="button"
+                  class="btn btn-outline-secondary px-4"
+                >
+                  إلغاء
+                </button>
+              </div>
+            </div>
+            <!-- </form> -->
+          </div>
+        </div>
+      </section>
     </main>
 
-            <!-- chatboot -->
-        <div class="booooooooooooooot">
-          <div id="btn-show-Boot" class="boot-1 shadow">
-            <span>🤖</span>
+    <!-- chatboot -->
+    <div class="booooooooooooooot">
+      <div id="btn-show-Boot" class="boot-1 shadow">
+        <span>🤖</span>
+      </div>
+      <div id="boobab-Chat" class="hidden">
+        <div id="app">
+          <div id="header">
+            <div id="bot-avatar">🤖</div>
+            <div style="flex: 1">
+              <div id="header-name">وثّق بوت</div>
+              <div id="header-status">
+                <span class="online-dot"></span>
+                متصل الآن · مساعدك في تجديد الوثائق الرسمية
+              </div>
+            </div>
+            <div id="header-badge">وَثِّق</div>
+            <div id="closs-boot">
+              <i
+                class="fa-solid fa-xmark"
+                style="color: rgb(255, 255, 255)"
+              ></i>
+            </div>
           </div>
-          <div id="boobab-Chat" class="hidden">
-            <div id="app">
-              <div id="header">
-                <div id="bot-avatar">🤖</div>
-                <div style="flex: 1">
-                  <div id="header-name">وثّق بوت</div>
-                  <div id="header-status">
-                    <span class="online-dot"></span>
-                    متصل الآن · مساعدك في تجديد الوثائق الرسمية
-                  </div>
-                </div>
-                <div id="header-badge">وَثِّق</div>
-                <div id="closs-boot">
-                  <i
-                    class="fa-solid fa-xmark"
-                    style="color: rgb(255, 255, 255)"
-                  ></i>
-                </div>
-              </div>
 
-              <div id="messages">
-                <div class="msg-wrap">
-                  <div class="avatar bot-av">🤖</div>
-                  <div class="bubble bot">
-                    مرحباً! أنا وثّق بوت 🎉 مساعدك المتخصص في منصة وثّق وتجديد
-                    الوثائق الرسمية في مصر. أستطيع مساعدتك في: • الأوراق
-                    المطلوبة لكل وثيقة • الرسوم التقريبية والجهات المختصة •
-                    كيفية استخدام منصة وثّق • التنبيهات ومواعيد التجديد اسألني
-                    أي سؤال يخطر على بالك 👇
-                  </div>
-                </div>
-                <div id="typing-row">
-                  <div class="avatar bot-av">🤖</div>
-                  <div id="typing-bubble">
-                    <div class="dot-t"></div>
-                    <div class="dot-t"></div>
-                    <div class="dot-t"></div>
-                  </div>
-                </div>
+          <div id="messages">
+            <div class="msg-wrap">
+              <div class="avatar bot-av">🤖</div>
+              <div class="bubble bot">
+                مرحباً! أنا وثّق بوت 🎉 مساعدك المتخصص في منصة وثّق وتجديد
+                الوثائق الرسمية في مصر. أستطيع مساعدتك في: • الأوراق المطلوبة
+                لكل وثيقة • الرسوم التقريبية والجهات المختصة • كيفية استخدام
+                منصة وثّق • التنبيهات ومواعيد التجديد اسألني أي سؤال يخطر على
+                بالك 👇
               </div>
-
-              <div id="quick">
-                <div id="quick-label">أسئلة سريعة:</div>
-                <div id="quick-btns" class="overflow-auto">
-                  <button
-                    class="qbtn"
-                    onclick="send('كيف أجدد جواز سفري في مصر؟')"
-                  >
-                    📄 تجديد الجواز
-                  </button>
-                  <button
-                    class="qbtn"
-                    onclick="send('ما هي خطوات تجديد بطاقة الرقم القومي؟')"
-                  >
-                    🪪 الرقم القومي
-                  </button>
-                  <button
-                    class="qbtn"
-                    onclick="send('ما الأوراق المطلوبة لتجديد رخصة القيادة؟')"
-                  >
-                    🚗 رخصة القيادة
-                  </button>
-                  <button
-                    class="qbtn"
-                    onclick="send('كيف تعمل منصة وثّق وما فوائدها؟')"
-                  >
-                    🔔 كيف تعمل المنصة
-                  </button>
-                  <button
-                    class="qbtn"
-                    onclick="send('كم تكلف تجديد الوثائق الرسمية؟')"
-                  >
-                    💰 الرسوم والتكاليف
-                  </button>
-                  <button class="qbtn" onclick="send('مين صنعك؟')">
-                    👨‍💻 مين صنعك؟
-                  </button>
-                </div>
-              </div>
-
-              <div id="input-area">
-                <div id="inp-wrap">
-                  <textarea
-                    id="inp"
-                    rows="1"
-                    placeholder="اكتب سؤالك هنا..."
-                    onkeydown="handleKey(event)"
-                    oninput="
-                      this.style.height = 'auto';
-                      this.style.height =
-                        Math.min(this.scrollHeight, 110) + 'px';
-                    "
-                  >
-                  </textarea>
-                </div>
-                <button id="send-btn" onclick="send()" title="إرسال">➤</button>
-              </div>
-              <div class="bg-white pe-3 pb-2">
-                وثّق بوت — نظام متخصص في تجديد الوثائق الرسمية
+            </div>
+            <div id="typing-row">
+              <div class="avatar bot-av">🤖</div>
+              <div id="typing-bubble">
+                <div class="dot-t"></div>
+                <div class="dot-t"></div>
+                <div class="dot-t"></div>
               </div>
             </div>
           </div>
+
+          <div id="quick">
+            <div id="quick-label">أسئلة سريعة:</div>
+            <div id="quick-btns" class="overflow-auto">
+              <button class="qbtn" onclick="send('كيف أجدد جواز سفري في مصر؟')">
+                📄 تجديد الجواز
+              </button>
+              <button
+                class="qbtn"
+                onclick="send('ما هي خطوات تجديد بطاقة الرقم القومي؟')"
+              >
+                🪪 الرقم القومي
+              </button>
+              <button
+                class="qbtn"
+                onclick="send('ما الأوراق المطلوبة لتجديد رخصة القيادة؟')"
+              >
+                🚗 رخصة القيادة
+              </button>
+              <button
+                class="qbtn"
+                onclick="send('كيف تعمل منصة وثّق وما فوائدها؟')"
+              >
+                🔔 كيف تعمل المنصة
+              </button>
+              <button
+                class="qbtn"
+                onclick="send('كم تكلف تجديد الوثائق الرسمية؟')"
+              >
+                💰 الرسوم والتكاليف
+              </button>
+              <button class="qbtn" onclick="send('مين صنعك؟')">
+                👨‍💻 مين صنعك؟
+              </button>
+            </div>
+          </div>
+
+          <div id="input-area">
+            <div id="inp-wrap">
+              <textarea
+                id="inp"
+                rows="1"
+                placeholder="اكتب سؤالك هنا..."
+                onkeydown="handleKey(event)"
+                oninput="
+                  this.style.height = 'auto';
+                  this.style.height = Math.min(this.scrollHeight, 110) + 'px';
+                "
+              >
+              </textarea>
+            </div>
+            <button id="send-btn" onclick="send()" title="إرسال">➤</button>
+          </div>
+          <div class="bg-white pe-3 pb-2">
+            وثّق بوت — نظام متخصص في تجديد الوثائق الرسمية
+          </div>
         </div>
-        <!--end chatboot -->
+      </div>
+    </div>
+    <!--end chatboot -->
 
-
-
-<!-- loader -->
-    <div id="loooder" class="lood d-flex align-items-center justify-content-center   d-none">
+    <!-- loader -->
+    <div
+      id="loooder"
+      class="lood d-flex align-items-center justify-content-center d-none"
+    >
       <!-- From Uiverse.io by mobinkakei -->
       <div id="wifi-loader">
         <svg class="circle-outer" viewBox="0 0 86 86">
@@ -704,25 +777,25 @@
       </div>
     </div>
 
-
-<!-- end footer -->
-  <div class="foot py-4 border-top border-1 border-secondary-subtle  text-center text-secondary bg-secondary-subtle">
-     <h5 class="">جميع الحقوق محفوظة لمنصة وثق © 2026</h5>
+    <!-- end footer -->
+    <div
+      class="foot py-4 border-top border-1 border-secondary-subtle text-center text-secondary bg-secondary-subtle"
+    >
+      <h5 class="">جميع الحقوق محفوظة لمنصة وثق © 2026</h5>
       <p class="h6">
         باستخدامك لمنصة وَثِّق، فإنك توافق على الشروط والأحكام الخاصة باستخدام
         خدمات إدارة وتجديد الوثائق الرسمية.
       </p>
-  </div>
+    </div>
 
-</div>
     <!-- bootstrap -->
     <script src="js/bootstrap.bundle.min.js"></script>
     <!-- mainJs -->
     <script src="js/addNewDos.js"></script>
-        <script src="js/mmode.js"></script>
+    <script src="js/mmode.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-      <!-- chatboot -->
+    <!-- chatboot -->
     <script>
       document.getElementById("closs-boot").onclick = () => {
         document.getElementById("boobab-Chat").classList.add("hidden");
@@ -733,7 +806,7 @@
         // alert("hello");
       };
     </script>
-   <script>
+    <script>
       // السيرفر الأساسي
       const BACKEND_URL =
         "https://hook.eu1.make.com/kqos2tf79agek87o7ol1u272eubx3f7r";
@@ -871,7 +944,5 @@
         inpEl.focus();
       }
     </script>
-</body>
+  </body>
 </html>
-
-
